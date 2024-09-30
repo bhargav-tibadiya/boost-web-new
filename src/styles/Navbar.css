@@ -1,0 +1,218 @@
+.header_area {
+  z-index: 10;
+  padding: 20px 0;
+  position: relative;
+}
+.header_area .navbar-brand {
+  min-width: 100px;
+  margin: 0;
+}
+.header_area .icon {
+  display: none;
+}
+.header_area .navbar_main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header_area .navbar_main .app-btn {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.header_area .navbar_main .app-btn a {
+  display: block;
+}
+.header_area .navbar_main .app-btn a img {
+  height: 50px;
+}
+.header_area .navbar_main .social_icon {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  align-items: center;
+}
+.header_area .navbar_main .social_icon h6 {
+  color: white;
+  margin: 0;
+}
+.header_area .navbar_main .social_icon .icon {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.header_area .navbar .navbar-brand {
+  display: none;
+}
+.header_area .navbar .menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  list-style: none;
+}
+.header_area .navbar .menu li a {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0;
+}
+.header_area .navbar .join-btn {
+  display: none;
+}
+.header_area .navbar .social_icon {
+  display: none;
+}
+.header_area .join-btn {
+  background-color: #26D7F3;
+  color: #222222;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 10px 40px;
+  font-weight: 600;
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: 4px 4px #000;
+  text-transform: uppercase;
+}
+.header_area .join-btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+.header_area .show_menu {
+  display: none;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 16;
+  border-radius: 50%;
+}
+.header_area .show_menu span {
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  display: block;
+  transition: 0.4s;
+  border-radius: 5px;
+  margin: 4px auto;
+}
+.header_area .show_menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.header_area .show_menu.active span:first-child {
+  display: block;
+  transform: translateY(13px) rotate(45deg);
+}
+.header_area .show_menu.active span:last-child {
+  display: block;
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+  .header_area .navbar_main .app-btn a img {
+    height: 40px;
+  }
+  .header_area .navbar .menu li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .header_area .icon {
+    display: flex;
+    gap: 10px;
+  }
+  .header_area {
+    padding: 20px 0;
+  }
+  .header_area .navbar {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../resources/images/Hero_Bg_Mobile.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 15;
+    overflow-x: hidden;
+    transform-origin: 50% 50% 0px;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    padding-bottom: 24px;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    will-change: transform;
+    transform: translate3d(0px, -300px, 0px) scale(1, 1) scale(1, 0.945615);
+    transition: 0.5s;
+  }
+  .header_area .navbar .join-btn {
+    display: inline-block !important;
+  }
+  .header_area .navbar .menu {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+  .header_area .navbar .menu li a {
+    padding: 0;
+  }
+  .header_area .navbar.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0px, 0, 0px) scale(1, 1) scale(1, 1);
+  }
+  .header_area .show_menu {
+    display: flex;
+    margin-left: 10px;
+  }
+  .header_area .navbar_main .app-btn {
+    display: none;
+  }
+  .header_area .navbar_main .navbar .app-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header_area .navbar-brand {
+    width: auto;
+  }
+  .header_area .join-btn {
+    display: none;
+  }
+  .header_area .navbar .social_icon {
+    display: flex !important;
+  }
+  .header_area .navbar_main .social_icon {
+    display: none;
+  }
+  .header_area .navbar .navbar-brand {
+    text-align: center;
+    display: block;
+  }
+  .header_area .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 428px) {
+  .header_area .show_menu {
+    margin-left: 10px;
+  }
+  .header_area .icon {
+    display: flex;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,805 @@
+.boost_buy_section {
+    position: relative;
+
+    .purple_circle {
+        width: 1100px;
+        height: 1100px;
+        position: absolute;
+        top: -20%;
+        right: -20%;
+        background-color: #C536F7;
+        filter: blur(100px);
+        border-radius: 50%;
+    }
+
+    .green_circle {
+        width: 1100px;
+        height: 1100px;
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        background: radial-gradient(circle, rgb(156, 255, 135) 0%, rgba(156, 255, 135, 0) 100%);
+        filter: blur(100px);
+        border-radius: 50%;
+    }
+
+    .blue_circle {
+        width: 1200px;
+        height: 1200px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(38, 215, 243, 1) 0%, rgba(38, 215, 243, 0) 100%);
+        filter: blur(250px);
+        border-radius: 50%;
+    }
+
+    .texture_bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.4;
+        // height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+        }
+    }
+
+    .pre_sale_section {
+        padding-top: 100px;
+        z-index: 9;
+        position: relative;
+
+        .pre_sale_left {
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                font-family: 'Thunder';
+                font-weight: 800;
+                color: white;
+                font-size: 120px;
+                -webkit-text-stroke: 4px black;
+                text-shadow:
+                    -3px 5px #000,
+                    -2px 6px #000,
+                    -1px 7px #000,
+                    0px 8px #000,
+                    1px 9px #000,
+                    2px 10px #000,
+                    3px 11px #000,
+                    4px 12px #000,
+                    5px 13px #000,
+                    6px 14px #000,
+                    7px 15px #000,
+                    8px 16px #000,
+                    9px 17px #000,
+                    10px 18px #000,
+                ;
+                transition-property: all;
+                transition-duration: .3s;
+                line-height: normal;
+                display: inline-block;
+            }
+
+            // h6 {
+            //     text-transform: uppercase;
+            //     font-weight: 700;
+            //     color: white;
+            //     font-size: 32px;
+            //     -webkit-text-stroke: 2px black;
+            //     text-shadow:
+            //         0px 3px #000,
+            //         1px 4px #000,
+            //         2px 5px #000,
+            //     ;
+            //     transition-property: all;
+            //     transition-duration: .3s;
+            //     line-height: normal;
+            //     margin-bottom: 30px;
+            //     display: inline-block;
+            // }
+
+        }
+
+        .pre_sale_right {
+            h1 {
+                display: none !important;
+                text-transform: uppercase;
+                font-family: 'Thunder';
+                font-weight: 800;
+                color: white;
+                font-size: 120px;
+                -webkit-text-stroke: 4px black;
+                text-shadow:
+                    -3px 5px #000,
+                    -2px 6px #000,
+                    -1px 7px #000,
+                    0px 8px #000,
+                    1px 9px #000,
+                    2px 10px #000,
+                    3px 11px #000,
+                    4px 12px #000,
+                    5px 13px #000,
+                    6px 14px #000,
+                    7px 15px #000,
+                    8px 16px #000,
+                    9px 17px #000,
+                    10px 18px #000,
+                ;
+                transition-property: all;
+                transition-duration: .3s;
+                line-height: normal;
+                display: inline-block;
+            }
+
+            .launch_price {
+                background: radial-gradient(circle, #9bff8730 0%, #018EA550 60%, #8946EC70 100%);
+                border: 2px solid rgba(255, 255, 255, 0.8);
+                border-radius: 50px;
+                padding: 20px;
+                margin: 0 90px;
+
+                .launch_price_inner_box {
+                    background: white;
+                    border-radius: 40px;
+                    padding: 50px;
+                    text-align: center;
+
+                    h5 {
+                        font-family: 'Thunder';
+                        font-size: 60px;
+                        font-weight: 800;
+                        text-transform: uppercase;
+                        margin-bottom: 60px;
+                        color: #222222;
+                    }
+
+                    .boost_box {
+                        padding: 24px;
+                        background-color: #F1F1F1;
+                        border-radius: 50px;
+                        margin-bottom: 15px;
+
+                        .boost_price_box {
+                            background-color: #D40EF5;
+                            padding: 16px;
+                            border-radius: 100px;
+                            margin-top: -50px;
+                            margin-bottom: 30px;
+
+                            p {
+                                font-family: 'Thunder';
+                                font-size: 32px;
+                                font-weight: 800;
+                                text-transform: uppercase;
+                                color: white;
+                                margin: 0;
+                            }
+                        }
+
+                        .text {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+
+                            h6 {
+                                font-size: 20px;
+                                font-weight: 700;
+                                color: #22222266;
+                                margin: 0;
+                            }
+
+                            p {
+                                font-size: 20px;
+                                font-weight: 400;
+                                color: #22222266;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    h6 {
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #6A717D;
+                    }
+
+                    .metamask_button {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        align-items: center;
+                        margin-top: 40px;
+
+                        button {
+                            background-color: #26D7F3;
+                            color: #222222;
+                            text-align: center;
+                            border: 2px solid #222222;
+                            border-radius: 50px;
+                            padding: 10px 40px;
+                            font-weight: 600;
+                            transition-property: all;
+                            transition-duration: .3s;
+                            box-shadow: 4px 4px #222222;
+                            text-transform: uppercase;
+                            width: max-content;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            width: 220px;
+
+                            &:hover {
+                                transform: translate(3px, 3px);
+                                box-shadow: none;
+                            }
+                        }
+
+                        .wall_connect {
+                            background-color: #FFFCFC;
+                            color: #222222;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.how_to_buy {
+    margin-top: 200px;
+    z-index: 10;
+    position: relative;
+
+    .how_to_buy_card {
+        background: radial-gradient(circle, rgba(25, 185, 219, 0.50) 0%, rgba(68, 136, 237, 0.50) 50%, rgba(137, 70, 236, 0.50) 100%);
+        border-radius: 50px;
+        border: 2px solid;
+        padding: 60px;
+        box-shadow: 0px 5px 80px 5px #172B6140;
+        border: 2px solid #1F93FF50;
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Thunder';
+            font-weight: 800;
+            color: white;
+            font-size: 80px;
+            -webkit-text-stroke: 4px black;
+            text-shadow:
+                0px 8px #000,
+                1px 9px #000,
+                2px 10px #000,
+                3px 11px #000,
+                4px 12px #000,
+                5px 13px #000,
+                6px 14px #000,
+            ;
+            transition-property: all;
+            transition-duration: .3s;
+            line-height: normal;
+            margin-bottom: 40px;
+        }
+
+        .how_to_buy_card_main {
+            display: flex;
+            column-gap: 100px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                width: 1px;
+                border-radius: 2px;
+                height: 70%;
+            }
+
+            .Coin {
+                position: absolute;
+                bottom: -170px;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            .coin_arrow {
+                position: absolute;
+                bottom: -230px;
+                left: 150px;
+
+                .coin_arrow_mobile {
+                    display: none;
+                }
+            }
+
+            .how_to_buy_card_left {
+                width: 50%;
+
+                h6 {
+                    color: #9CFF87;
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: white;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+
+            .how_to_buy_card_right {
+                width: 50%;
+
+                h6 {
+                    color: #9CFF87;
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: white;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 400;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .boost_button {
+        background-color: #26D7F3;
+        color: #222222;
+        text-align: center;
+        border: 2px solid #222222;
+        border-radius: 50px;
+        padding: 10px 40px;
+        font-weight: 700;
+        transition-property: all;
+        transition-duration: .3s;
+        box-shadow: 4px 4px #222222;
+        text-transform: uppercase;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 200px;
+        margin: 50px auto 0;
+        line-height: 30px;
+
+        &:hover {
+            transform: translate(3px, 3px);
+            box-shadow: none;
+        }
+    }
+
+    .how_to_buy_content {
+        margin-top: 100px;
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer_section {
+    padding-top: 100px;
+
+    .footer_boost_buy {
+        position: absolute;
+        bottom: -370%;
+        z-index: -10;
+        left: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.boost_buy {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+@media (max-width:1440px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0 40px;
+    }
+
+    .how_to_buy .how_to_buy_card {
+        padding: 50px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow img {
+        height: 60px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow {
+        position: absolute;
+        bottom: -180px;
+        left: 150px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .how_to_buy_card_right h6,
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .how_to_buy_card_left h6 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:1200px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .Coin img {
+        width: 160px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .Coin {
+        position: absolute;
+        bottom: -150px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow {
+        position: absolute;
+        bottom: -180px;
+        left: 80px;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .how_to_buy .container,
+    .pre_sale_section .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer_section .footer_boost_buy {
+        bottom: -250%;
+    }
+}
+
+@media (max-width:991px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .boost_price_box p {
+        font-size: 28px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box h5 {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .boost_buy_section .purple_circle {
+        width: 800px;
+        height: 800px;
+        top: -20%;
+        left: 30%;
+        filter: blur(100px);
+    }
+
+    .boost_buy_section .green_circle {
+        width: 800px;
+        height: 800px;
+        top: -20%;
+        right: 40%;
+        filter: blur(100px);
+        left: inherit;
+    }
+
+    .boost_buy_section .blue_circle {
+        width: 1000px;
+        height: 1000px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(100px);
+    }
+
+    .how_to_buy {
+        margin-top: 100px;
+        z-index: 10;
+        position: relative;
+    }
+
+    .footer_section .footer_boost_buy {
+        bottom: -220%;
+    }
+}
+
+@media (max-width:900px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .boost_price_box p {
+        font-size: 24px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .text p,
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .text h6 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:840px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box {
+        padding: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .boost_buy_section .pre_sale_section {
+        padding-top: 50px;
+        z-index: 9;
+        position: relative;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_left h1 {
+        display: none;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right {
+        text-align: center;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0 120px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right h1 {
+        font-size: 100px;
+        margin-bottom: 30px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_left {
+        margin-top: 100px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_left img {
+        width: 70%;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow .coin_arrow_mobile {
+        display: block;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow .coin_arrow_desktop {
+        display: none;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow img {
+        height: auto;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .how_to_buy_card_left,
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .how_to_buy_card_right {
+        width: 100%;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main::after {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 1px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .Coin {
+        position: absolute;
+        bottom: inherit;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow {
+        position: absolute;
+        bottom: inherit;
+        top: 127%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .how_to_buy .boost_button {
+        margin: 200px auto 0;
+    }
+
+    .how_to_buy .how_to_buy_content {
+        display: none;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .Coin img {
+        width: 200px;
+    }
+
+    .footer_section .footer_boost_buy {
+        bottom: -20%;
+    }
+}
+
+@media (max-width:680px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0 90px;
+    }
+
+    .how_to_buy .boost_button {
+        margin: 220px auto 0;
+    }
+}
+
+@media (max-width:576px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0 70px;
+    }
+
+    .how_to_buy .boost_button {
+        margin: 250px auto 0;
+    }
+
+    .how_to_buy .how_to_buy_card {
+        padding: 50px 40px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main::after {
+        top: 47%;
+    }
+}
+
+@media (max-width:540px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0 50px;
+    }
+}
+
+@media (max-width:480px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        margin: 0;
+    }
+
+    .boost_buy_section .pre_sale_section {
+        padding-top: 20px;
+        z-index: 9;
+        position: relative;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .text p,
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .text h6 {
+        font-size: 16px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right h1 {
+        font-size: 80px;
+        margin-bottom: 30px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_left {
+        margin-top: 50px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_left img {
+        width: 90%;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow {
+        top: 121%;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .Coin {
+        top: 107%;
+    }
+
+    .how_to_buy .how_to_buy_card h1 {
+        font-size: 70px;
+        text-shadow: 0px 8px #000, 1px 9px #000, 2px 10px #000, 3px 11px #000;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main::after {
+        top: 48%;
+    }
+
+    .how_to_buy .container,
+    .pre_sale_section .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width:400px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box {
+        padding: 20px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box {
+        padding: 16px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box {
+        border-radius: 30px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        border-radius: 40px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box {
+        border-radius: 30px;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .coin_arrow {
+        top: 119%;
+    }
+
+    .how_to_buy .how_to_buy_card .how_to_buy_card_main .Coin img {
+        width: 180px;
+    }
+
+    .how_to_buy .how_to_buy_card {
+        padding: 50px 20px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width:360px) {
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box h5 {
+        font-size: 46px;
+        margin-bottom: 40px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .boost_box .boost_price_box p {
+        font-size: 20px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price {
+        padding: 12px;
+    }
+
+    .boost_buy_section .pre_sale_section .pre_sale_right .launch_price .launch_price_inner_box .metamask_button button {
+        padding: 10px 20px;
+    }
+}

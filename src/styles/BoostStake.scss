@@ -1,0 +1,787 @@
+.boost_stake {
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    .boost_stake_section {
+        position: relative;
+
+        .purple_circle {
+            width: 1100px;
+            height: 1100px;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #C536F7;
+            filter: blur(150px);
+            border-radius: 50%;
+        }
+
+        .green_circle {
+            width: 1100px;
+            height: 1100px;
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            background: radial-gradient(circle, rgb(156, 255, 135) 0%, rgba(156, 255, 135, 0) 100%);
+            filter: blur(150px);
+            border-radius: 50%;
+        }
+
+        .blue_circle {
+            width: 1100px;
+            height: 1100px;
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            background: radial-gradient(circle, rgba(38, 215, 243, 1) 0%, rgba(38, 215, 243, 0) 100%);
+            filter: blur(150px);
+            border-radius: 50%;
+        }
+
+        .texture_bg {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.2;
+            // height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                // object-fit: cover;
+            }
+        }
+
+        .strike_boost_section {
+            padding-top: 100px;
+            z-index: 9;
+            position: relative;
+
+            .strike_card {
+                background: radial-gradient(circle, #9CFF8715 0%, #018EA507 50%, #8946EC15);
+                border-radius: 40px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(100px);
+                border: 3px solid rgba(251, 251, 251, .25);
+                padding: 70px 70px 120px;
+                text-align: center;
+
+                h1 {
+                    text-transform: uppercase;
+                    font-family: 'Thunder';
+                    font-weight: 800;
+                    color: white;
+                    font-size: 120px;
+                    -webkit-text-stroke: 4px black;
+                    text-shadow:
+                        -2px 6px #000,
+                        -1px 7px #000,
+                        0px 8px #000,
+                        1px 9px #000,
+                        2px 10px #000,
+                        3px 11px #000,
+                        4px 12px #000,
+                        5px 13px #000,
+                        6px 14px #000,
+                        7px 15px #000,
+                        8px 16px #000,
+                        9px 17px #000,
+                        10px 18px #000,
+                    ;
+                    transition-property: all;
+                    transition-duration: .3s;
+                    line-height: normal;
+                    display: inline-block;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: white;
+                    margin-bottom: 60px;
+                }
+
+                h6 {
+                    text-transform: uppercase;
+                    font-family: 'Thunder';
+                    font-weight: 800;
+                    color: white;
+                    font-size: 50px;
+                    -webkit-text-stroke: 3px black;
+                    text-shadow:
+                        1px 4px #000,
+                        2px 5px #000,
+                        3px 6px #000,
+                    ;
+                    transition-property: all;
+                    transition-duration: .3s;
+                    line-height: normal;
+                    display: inline-block;
+                    margin-bottom: 40px;
+                }
+
+                .nav-pills {
+                    display: flex;
+                    column-gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        color: #FFFCFC;
+                        margin: 0;
+                    }
+
+                    button {
+                        background-color: #FFFFFF;
+                        color: #222222;
+                        text-align: center;
+                        border: 2px solid #222222;
+                        border-radius: 50px;
+                        padding: 10px 30px;
+                        font-weight: 600;
+                        transition-property: all;
+                        transition-duration: .3s;
+                        box-shadow: 4px 4px #222222;
+                        text-transform: uppercase;
+                        width: max-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+
+                        &:hover {
+                            transform: translate(3px, 3px);
+                            box-shadow: none;
+                        }
+
+                        &.active {
+                            background-color: #26D7F3;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.wallet_information_main {
+    position: relative;
+    top: -100px;
+    z-index: 11;
+
+    .wallet_information_card {
+        position: relative;
+        width: 60%;
+        background-color: white;
+        box-shadow: 0px 2px 2px #00000003;
+        border-radius: 30px;
+        margin: auto;
+
+        .wallet_information {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+            filter: blur(6px);
+
+            &.blur {
+                filter: none;
+            }
+
+            .wallet_information_top {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 30px;
+                row-gap: 2px;
+                justify-content: center;
+
+                .wallet_content {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 12px;
+
+                    h6 {
+                        color: #222222;
+                        margin: 0;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        color: #F55555;
+                        margin: 0;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .wallet_information_bottom {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+
+                .reward_btn {
+                    background-color: white;
+                    border: 2px solid #A7A7A7;
+                    color: #A7A7A7;
+                    font-weight: 600;
+                    padding: 8px 20px;
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        .wallet_p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+
+
+            p {
+                color: #222222;
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 500;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .meta {
+        background-color: #26D7F3;
+        color: #222222;
+        text-align: center;
+        border: 2px solid #222222;
+        border-radius: 50px;
+        padding: 10px 40px;
+        font-weight: 600;
+        transition-property: all;
+        transition-duration: .3s;
+        box-shadow: 4px 4px #222222;
+        text-transform: uppercase;
+        margin: 30px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 220px;
+
+        &:hover {
+            transform: translate(3px, 3px);
+            box-shadow: none;
+        }
+    }
+}
+
+.boost_token {
+    margin-top: 50px;
+    position: relative;
+    z-index: 12;
+
+    h1 {
+        text-transform: uppercase;
+        font-family: 'Thunder';
+        font-weight: 800;
+        color: white;
+        font-size: 80px;
+        -webkit-text-stroke: 4px black;
+        text-shadow:
+            2px 5px #000,
+            3px 6px #000,
+            4px 7px #000,
+            5px 8px #000,
+            6px 9px #000,
+        ;
+        transition-property: all;
+        transition-duration: .3s;
+        line-height: normal;
+        display: inline-block;
+        margin-bottom: 70px;
+    }
+
+    .boost_token_left {
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
+        }
+    }
+
+    .boost_token_right {
+        text-align: center;
+
+        h1 {
+            display: none;
+        }
+    }
+}
+
+.token_momics {
+    position: relative;
+    margin-top: 150px;
+
+    h2 {
+        text-transform: uppercase;
+        font-family: 'Thunder';
+        font-weight: 800;
+        color: white;
+        font-size: 80px;
+        -webkit-text-stroke: 3px black;
+        text-shadow:
+            2px 5px #000,
+            3px 6px #000,
+            4px 7px #000,
+            5px 8px #000,
+            6px 9px #000,
+        ;
+        transition-property: all;
+        transition-duration: .3s;
+        line-height: normal;
+        display: none;
+        margin-bottom: 40px;
+    }
+
+    .token_momics_card {
+        padding: 40px 80px;
+        background: linear-gradient(135deg, rgba(255, 111, 216, .72) 0%, rgba(56, 19, 194, .72) 100%);
+        box-shadow: 0px 5px 80px 5px #172B6166;
+        border: 2px solid #3813C2AB;
+        border-radius: 40px;
+        text-align: center;
+
+        h2 {
+            text-transform: uppercase;
+            font-family: 'Thunder';
+            font-weight: 800;
+            color: white;
+            font-size: 80px;
+            -webkit-text-stroke: 3px black;
+            text-shadow:
+                2px 5px #000,
+                3px 6px #000,
+                4px 7px #000,
+                5px 8px #000,
+                6px 9px #000,
+            ;
+            transition-property: all;
+            transition-duration: .3s;
+            line-height: normal;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        .token_table {
+            border: 1.5px solid white;
+            border-radius: 20px;
+            overflow: hidden;
+
+            .token_table_head {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                border-bottom: 1.5px solid white;
+
+                h6 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 15px 10px;
+                    border-right: 1.5px solid white;
+                    color: white;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+
+                h5 {
+                    text-align: start;
+                    background-color: #453FA1CC;
+                    border-right: 1.5px solid white;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 15px 10px;
+                }
+            }
+
+            .token_table_body {
+                .token_table_data {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    border-bottom: 1.5px solid white;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    h6 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 15px 10px;
+                        border-right: 1.5px solid white;
+                        color: white;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+                    }
+
+                    h5 {
+                        text-align: start;
+                        background-color: #453FA1CC;
+                        border-right: 1.5px solid white;
+                        color: white;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 15px 10px;
+                    }
+                }
+            }
+        }
+
+        button {
+            background-color: #26D7F3;
+            color: #222222;
+            text-align: center;
+            border: 2px solid #222222;
+            border-radius: 50px;
+            padding: 10px 40px;
+            font-weight: 600;
+            transition-property: all;
+            transition-duration: .3s;
+            box-shadow: 4px 4px #222222;
+            text-transform: uppercase;
+            margin: 30px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            &:hover {
+                transform: translate(3px, 3px);
+                box-shadow: none;
+            }
+        }
+    }
+
+    .token_momics_card_mobile {
+        background: linear-gradient(135deg, rgba(255, 111, 216, .72) 0%, rgba(56, 19, 194, .72) 100%);
+        box-shadow: 0px 5px 80px 5px #172B6166;
+        border: 2px solid #3813C2AB;
+        border-radius: 40px;
+        padding: 30px;
+        text-align: center;
+        display: none;
+
+        .swiper {
+            position: inherit;
+
+            .swiper-pagination {
+                bottom: -40px;
+
+                .swiper-pagination-bullet {
+                    width: 20px;
+                    height: 20px;
+                    border: 1.2px solid white;
+                    background-color: transparent;
+                }
+
+                .swiper-pagination-bullet-active {
+                    border: 1px solid white;
+                    background-color: white;
+                }
+            }
+        }
+
+        .token_table {
+            border: 1.5px solid white;
+            border-radius: 20px;
+            overflow: hidden;
+
+            .token_table_head {
+                h5 {
+                    text-align: center;
+                    background-color: #453FA1CC;
+                    border-bottom: 1.5px solid white;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 15px 10px;
+                }
+            }
+
+            .token_table_body {
+                .token_table_data {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    border-bottom: 1.5px solid white;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    h6 {
+                        text-align: start;
+                        border-right: 1.5px solid white;
+                        color: white;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 15px 10px;
+
+                        &:last-child {
+                            border-right: none;
+                            text-align: end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer_section {
+    padding-top: 100px;
+
+    .footer_boost_buy {
+        position: absolute;
+        bottom: -270%;
+        z-index: -10;
+        left: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width:1200px) {
+    .wallet_information_main .wallet_information_card {
+        width: 70%;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .boost_stake_section .container,
+    .boost_token .container,
+    .token_momics .container,
+    .wallet_information_main .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width:991px) {
+    .boost_token {
+        margin: 0;
+    }
+
+    .token_momics {
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .footer_section .footer_boost_buy {
+        bottom: -200%;
+    }
+
+    .boost_token h1 {
+        display: none;
+    }
+
+    .boost_token .boost_token_right h1 {
+        display: block;
+    }
+
+    .boost_stake .boost_stake_section .purple_circle {
+        width: 1100px;
+        height: 1100px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #C536F7;
+        filter: blur(100px);
+        border-radius: 50%;
+    }
+
+    .boost_stake .boost_stake_section .green_circle {
+        width: 1100px;
+        height: 1100px;
+        position: absolute;
+        top: -20%;
+        right: -60%;
+        background: radial-gradient(circle, rgb(156, 255, 135) 0%, rgba(156, 255, 135, 0) 100%);
+        filter: blur(100px);
+        border-radius: 50%;
+    }
+
+    .boost_stake .boost_stake_section .blue_circle {
+        width: 1100px;
+        height: 1100px;
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        background: radial-gradient(circle, rgb(38, 215, 243) 0%, rgba(38, 215, 243, 0) 100%);
+        filter: blur(100px);
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:900px) {
+    .wallet_information_main .wallet_information_card {
+        width: 80%;
+    }
+}
+
+@media (max-width:767px) {
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card h1 {
+        font-size: 80px;
+        text-shadow: 0px 8px #000, 1px 9px #000, 2px 10px #000, 3px 11px #000, 4px 12px #000, ;
+    }
+
+    .boost_stake .boost_stake_section .strike_boost_section {
+        padding-top: 50px;
+    }
+
+    .wallet_information_main .wallet_information_card {
+        width: 90%;
+    }
+
+    .boost_token .boost_token_right {
+        margin-bottom: 30px;
+    }
+
+    .token_momics .token_momics_card {
+        padding: 40px 60px;
+    }
+
+    .footer_section .footer_boost_buy {
+        bottom: -10%;
+    }
+}
+
+@media (max-width:600px) {
+    .token_momics .token_momics_card {
+        padding: 30px 30px;
+    }
+
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card {
+        padding: 40px 30px 120px;
+    }
+
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card .nav-pills {
+        gap: 12px;
+    }
+}
+
+@media (max-width:576px) {
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card .nav-pills {
+        flex-direction: column;
+    }
+
+    .wallet_information_main .wallet_information_card .wallet_information .wallet_information_top {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .wallet_information_main .wallet_information_card .wallet_information .wallet_information_bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wallet_information_main .wallet_information_card {
+        width: 80%;
+    }
+
+    .wallet_information_main .wallet_information_card .wallet_information .wallet_information_bottom .reward_btn {
+        width: max-content;
+    }
+
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card p {
+        margin-bottom: 40px;
+    }
+
+    .token_momics .token_momics_card {
+        display: none;
+    }
+
+
+    .token_momics .token_momics_card_mobile {
+        display: block;
+    }
+
+    .token_momics h2 {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width:480px) {
+
+    .boost_stake_section .container,
+    .boost_token .container,
+    .token_momics .container,
+    .wallet_information_main .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width:428px) {
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card h1 {
+        font-size: 60px;
+        text-shadow: 0px 8px #000, 1px 9px #000, 2px 10px #000, 3px 11px #000;
+        -webkit-text-stroke: 3px black
+    }
+
+    .boost_stake .boost_stake_section .strike_boost_section .strike_card h6 {
+        font-size: 40px;
+        -webkit-text-stroke: 2px black;
+    }
+
+    .wallet_information_main .wallet_information_card .wallet_information .wallet_information_top .wallet_content {
+        flex-direction: column;
+    }
+
+    .boost_token .boost_token_right img {
+        width: 100%;
+    }
+    
+
+    .token_momics h2,
+    .token_momics .token_momics_card h2,
+    .boost_token .boost_token_right h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width:400px) {
+    .token_momics .token_momics_card_mobile {
+        padding: 20px;
+    }
+
+    .token_momics .token_momics_card_mobile .token_table .token_table_head h5,
+    .token_momics .token_momics_card_mobile .token_table .token_table_body .token_table_data h6 {
+        font-size: 16px;
+    }
+}
