@@ -1,119 +1,56 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../resources/images/Logo.svg";
-import telegram from "../resources/images/logo-telegram.svg";
-import twitter from "../resources/images/logo-twitter.svg";
-import appStore from "../resources/images/App_Store_Badge.svg";
-import playStore from "../resources/images/Google_Play_Badge.svg";
-import "../styles/Navbar.css";
+import { useNavigate } from "react-router-dom"
+import logoImage from '../resources/images/logo.png'
+import { useState } from "react";
+import { IoCloseSharp } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 
-const menuData = [
-  { text: "Home", path: "/" },
-  // { text: "PRE-SALE", path: "/pre-sale" },
-  { text: "Token", path: "/token" },
-  { text: "FAQ", path: "/faq" },
-];
 
 const Navbar = () => {
-  //  const navigate = useNavigate();
 
-  //  const handleBoostBuy = () => {
-  //    navigate("/boost-buy");
-  //  };
+  const navigate = useNavigate();
+
   const [isMenuActive, setIsMenuActive] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsMenuActive((prevState) => !prevState);
-  };
+
+  const connectWallet = () => {
+    console.log("Connect to the wallet");
+  }
+
   return (
-    <>
-      <nav className="header_area">
-        <div className="container">
-          <div className="row">
-            <div className="d-flex align-items-center justify-content-between">
-              <Link className="navbar-brand" to="/">
-                <img src={Logo} alt="Logo" />
-              </Link>
-              <div className="navbar_main">
-                <nav className={`navbar ${isMenuActive ? "active" : ""}`}>
-                  <Link className="navbar-brand" to="/">
-                    <img src={Logo} alt="Logo" />
-                  </Link>
-                  <ul className="menu">
-                    {menuData.map((item) => (
-                      <li className="nav-item" key={item.text}>
-                        <a className="nav-link" href={item.path}>
-                          {item.text}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                  {/* <button className="join-btn" onClick={handleBoostBuy}>
-                    buy $boost
-                  </button> */}
-                  {/* <div className="app-btn">
-                    <Link to="">
-                      <img src={appStore} alt="AppStore" />
-                    </Link>
-                    <Link to="">
-                      <img src={playStore} alt="PlayStore" />
-                    </Link>
-                  </div> */}
-                  <div className="social_icon">
-                    <h6>Join our vibrant community!</h6>
-                    <div className="icon">
-                      <Link to="https://t.me/+70WQZc5RMyNlMzBk" target="_blank">
-                        <img src={telegram} alt="" />
-                      </Link>
-                      <Link
-                        to="https://twitter.com/Boost_Social_"
-                        target="_blank"
-                      >
-                        <img src={twitter} alt="" />
-                      </Link>
-                    </div>
-                  </div>
-                </nav>
-                {/* <button className="join-btn" onClick={handleBoostBuy}>
-                  buy $boost
-                </button> */}
-                <div className="social_icon">
-                  <h6>Join our vibrant community!</h6>
-                  <div className="icon">
-                    <Link to="https://t.me/+70WQZc5RMyNlMzBk" target="_blank">
-                      <img src={telegram} alt="" />
-                    </Link>
-                    <Link
-                      to="https://twitter.com/Boost_Social_"
-                      target="_blank"
-                    >
-                      <img src={twitter} alt="" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="icon">
-                <Link to="https://t.me/+70WQZc5RMyNlMzBk" target="_blank">
-                  <img src={telegram} alt="" />
-                </Link>
-                <Link to="https://twitter.com/Boost_Social_" target="_blank">
-                  <img src={twitter} alt="" />
-                </Link>
-              </div>
-                <div
-                  className={`show_menu ${isMenuActive ? "active" : ""}`}
-                  onClick={handleMenuClick}
-                >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-            </div>
+    <div className="max-w-[100vw] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+
+      {/* Navbar Menus */}
+      <div className="flex flex-row relative z-[1000] items-center justify-center gap-[24px] sm:gap-[8px]">
+        <div className=" cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
+        <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
+        <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
+        <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stack')}>STACK</div>
+        <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/faq')}>FAQ</div>
+      </div>
+
+      {/* Connect Wallat Button */}
+      <div onClick={() => { connectWallet() }} className="sm:hidden px-[45px] sm:px-[8px] sm:text-[14px] cursor-pointer font-[700] py-[12px] sm:py-[4px] bg-[#FED73C] border-solid border-2 sm:border-[2px] border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
+        CONNECT WALLET
+      </div>
+
+      <div className={`sm:flex hidden relative z-[1000]  size-[32px] text-[18px] bg-[#000000] text-[#ffffff] rounded-[25px] items-center justify-center`} onClick={() => { setIsMenuActive(prev => !prev) }}>
+        {isMenuActive ? <IoCloseSharp /> : <RxHamburgerMenu />}
+      </div>
+
+      <div className={`absolute z-[500] ${isMenuActive ? 'flex' : 'hidden'} top-0 left-[0px] w-[100vw] bg-[#002452] h-[450px]`} >
+        <div className="flex flex-col w-full items-center justify-center gap-[24px] sm:gap-[8px]">
+          <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/')}>HOME</div>
+          <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
+          <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/stack')}>STACK</div>
+          <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/faq')}>FAQ</div>
+          <div onClick={() => { connectWallet() }} className="sm:flex hidden px-[45px] sm:px-[8px] sm:text-[14px] cursor-pointer font-[700] py-[12px] sm:py-[4px] bg-[#FED73C] border-solid border-2 sm:border-[2px] border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
+            CONNECT WALLET
           </div>
         </div>
-      </nav>
-    </>
-  );
-};
+      </div>
 
-export default Navbar;
+    </div>
+  )
+}
+
+export default Navbar

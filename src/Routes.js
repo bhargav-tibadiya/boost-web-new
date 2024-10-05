@@ -2,10 +2,13 @@ import React, { lazy } from "react";
 import { retry } from "./utils/CommonFunctions";
 import { useRoutes } from "react-router-dom";
 import Loader from "./components/Loader";
+import Project from "./pages/Project";
+import JoinPool from "./pages/JoinPool";
 
 const Home = lazy(() => retry(() => import("./pages/Home")));
 const BoostBuy = lazy(() => retry(() => import("./pages/BoostBuy")));
 const FourOhFour = lazy(() => retry(() => import("./pages/FourOhFour")));
+const Stack = lazy(() => retry(() => import("./pages/Stack")));
 // const BoostStake = lazy(() => retry(() => import("./pages/BoostStake")));
 
 const Routes = () => {
@@ -17,6 +20,18 @@ const Routes = () => {
     {
       path: "/boost-buy",
       element: <BoostBuy />,
+    },
+    {
+      path: "/stack",
+      element: <Stack />,
+    },
+    {
+      path: "/launchpad/project/:id",
+      element: <Project />,
+    },
+    {
+      path: "/launchpad/project/:id/joinpool",
+      element: <JoinPool />,
     },
     // {
     //   path: "/boost-stake",
