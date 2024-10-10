@@ -13,7 +13,7 @@ import { IoCloseSharp } from "react-icons/io5"
 import { RxHamburgerMenu } from "react-icons/rx"
 
 
-const Stack = () => {
+const Stake = () => {
 
   const navigate = useNavigate()
 
@@ -33,7 +33,7 @@ const Stack = () => {
             <div className="cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
-            <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stack')}>STACK</div>
+            <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stake')}>STAKE</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/faq')}>FAQ</div>
           </div>
 
@@ -59,7 +59,7 @@ const Stack = () => {
           <div className="flex flex-col w-full items-center justify-center gap-[24px] sm:gap-[8px]">
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
-            <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/stack')}>STACK</div>
+            <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/stake')}>STAKE</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/faq')}>FAQ</div>
           </div>
         </div>
@@ -122,7 +122,7 @@ const Stack = () => {
               </div>
 
               <div className="text-[16px] min-w-[175px] px-[72px] py-[12px] sm:py-[6px] text-center h-fit mt-[16px] cursor-pointer leading-[20px] font-[700] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
-                UNSTACK
+                UNSTAKE
               </div>
             </div>
 
@@ -211,4 +211,4 @@ const Stack = () => {
   )
 }
 
-export default Stack
+export default Stake

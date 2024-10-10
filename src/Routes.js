@@ -8,7 +8,7 @@ import JoinPool from "./pages/JoinPool";
 const Home = lazy(() => retry(() => import("./pages/Home")));
 const BoostBuy = lazy(() => retry(() => import("./pages/BoostBuy")));
 const FourOhFour = lazy(() => retry(() => import("./pages/FourOhFour")));
-const Stack = lazy(() => retry(() => import("./pages/Stack")));
+const Stake = lazy(() => retry(() => import("./pages/Stake")));
 // const BoostStake = lazy(() => retry(() => import("./pages/BoostStake")));
 
 const Routes = () => {
@@ -22,8 +22,8 @@ const Routes = () => {
       element: <BoostBuy />,
     },
     {
-      path: "/stack",
-      element: <Stack />,
+      path: "/stake",
+      element: <Stake />,
     },
     {
       path: "/launchpad/project/:id",

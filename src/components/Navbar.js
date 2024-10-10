@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className=" cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
         <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
         <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
-        <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stack')}>STACK</div>
+        <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stake')}>STAKE</div>
         <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/faq')}>FAQ</div>
       </div>
 
