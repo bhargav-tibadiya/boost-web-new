@@ -37,6 +37,7 @@ import AppStore from '../resources/images/app_store.png'
 import PlayStore from '../resources/images/play_store.png'
 import TelegramIcon from '../resources/images/telegram_icon.png'
 import logoImage from '../resources/images/logo.png'
+import Boost2 from '../resources/images/boost_line2.png'
 
 import XIconW from '../resources/images/x-white.png'
 import TelegramIconW from '../resources/images/tele-white.png'
@@ -474,8 +475,8 @@ const Home = () => {
             <div className="pt-[75px] sm:pt-[15px] flex flex-col items-start justify-start">
               <img className="scale-85 sm:scale-75" src={BoostBig} alt="" />
             </div>
-            <div className="text-[32px] leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[24px] sm:mt-[6px]">
-              BOOST is a WEB3 Launchpad enhanced by a social platform.
+            <div className="text-[32px] leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
+              <img className="sm:scale-75" src={Boost2} />
             </div>
             <div className="px-[24px] sm:text-[14px] py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[375px] text-[#ffffff] border-[1px] rounded-[50px] bg-[#ffffff1f] mt-[56px] sm:mt-[24px]">
               Contract Address:
