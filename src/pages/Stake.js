@@ -40,10 +40,10 @@ const Stake = () => {
           {/* Connect Wallat Button */}
           <div className="flex items-center justify-center h-full sm:text-[14px] cursor-pointer font-[700]">
             <div className="flex items-center justify-center h-full gap-[12px]">
-              <a href="#" className="flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#239FDB] shadow-[#198DC4] border-[1px] border-[#198DC4] shadow-[2.4px_1.6px_0_0]">
+              <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#239FDB] shadow-[#198DC4] border-[1px] border-[#198DC4] shadow-[2.4px_1.6px_0_0]">
                 <img className="w-[18px] h-[18px]" src={TelegramIcon} alt="" />
               </a>
-              <a href="#" className="flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#2B2B2B] shadow-[#222222] border-[1px] border-[#222222] shadow-[2.4px_1.6px_0_0]">
+              <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#2B2B2B] shadow-[#222222] border-[1px] border-[#222222] shadow-[2.4px_1.6px_0_0]">
                 <img className="w-[18px] h-[18px]" src={XIcon} alt="" />
               </a>
 
@@ -173,10 +173,10 @@ const Stake = () => {
             <div className="flex flex-col items-end">
 
               <div className="flex pb-[24px]">
-                <a href="#" className="flex items-center justify-center h-[40px] w-[40px]">
+                <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
                   <img className="w-[30px] h-[30px]" src={XIcon} alt="" />
                 </a>
-                <a href="#" className="flex items-center justify-center h-[40px] w-[40px]">
+                <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[40px] w-[40px]">
                   <img className="w-[35px] h-[30px]" src={TelegramIcon} alt="" />
                 </a>
               </div>

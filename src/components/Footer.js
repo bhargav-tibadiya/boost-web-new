@@ -136,10 +136,10 @@ const Footer = () => {
           <div className="flex flex-col items-end">
 
             <div className="flex pb-[24px]">
-              <a href="#" className="flex items-center justify-center h-[40px] w-[40px]">
+              <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
                 <img className="w-[30px] h-[30px]" src={XIcon} alt="" />
               </a>
-              <a href="#" className="flex items-center justify-center h-[40px] w-[40px]">
+              <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[40px] w-[40px]">
                 <img className="w-[35px] h-[30px]" src={TelegramIcon} alt="" />
               </a>
             </div>
