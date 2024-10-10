@@ -271,9 +271,9 @@ const faqData = [
     ans:
       <>
         <ol>
-          <li>Buy 75,000 $BOOST tokens</li>
-          <li>Go to staking page and connect wallet and confirm staking by signing transaction</li>
-          <li>Register on IDO that you are interested in</li>
+          <li>1.&nbsp; Buy 75,000 $BOOST tokens</li>
+          <li>2. Go to staking page and connect wallet and confirm staking by signing transaction</li>
+          <li>3.&nbsp;Register on IDO that you are interested in</li>
         </ol>
       </>
   },
@@ -282,8 +282,8 @@ const faqData = [
     ans:
       <>
         <ol>
-          <li>Buy $BOOST from the top of the main page or click “BUY BOOST" anywhere on the page.</li>
-          <li>Go to staking page, connect wallet and confirm transaction for 75,000 $BOOST</li>
+          <li>1.&nbsp; Buy $BOOST from the top of the main page or click “BUY BOOST" anywhere on the page.</li>
+          <li>2. Go to staking page, connect wallet and confirm transaction for 75,000 $BOOST</li>
         </ol>
       </>
   },
@@ -295,7 +295,7 @@ const faqData = [
       </>
   },
   {
-    que: "Why should I stake $BOOST?",
+    que: "Which nationalities can't participate in an IDO?",
     ans:
       <>
         Currently, we do NOT allow the following nationalities to participate in any BOOST IDO:
