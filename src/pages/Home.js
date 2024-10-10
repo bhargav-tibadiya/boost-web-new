@@ -645,7 +645,7 @@ const Home = () => {
                         {
                           project.isLive
                             ?
-                            <button onClick={()=>navigate(project.path)} className="bg-[#26D7F3] text-[#002452] w-full px-[16px] py-[8px] rounded-[8px] text-[14px] leading-[16px] font-[500]">See Details</button>
+                            <button onClick={() => navigate(project.path)} className="bg-[#26D7F3] text-[#002452] w-full px-[16px] py-[8px] rounded-[8px] text-[14px] leading-[16px] font-[500]">See Details</button>
                             :
                             <button className="bg-[#6A717D3D] text-[#6A717D] w-full px-[16px] py-[8px] rounded-[8px] text-[14px] leading-[16px] font-[500]">See Details</button>
                         }
@@ -754,18 +754,18 @@ const Home = () => {
         <div className="text-[32px] leading-[36px] font-[800] text-[#ffffff]">DEVELOPMENT TEAM</div>
         <div className="text-[16px] leading-[20px] font-[700] text-[#ffffff] mt-[16px] mb-[10px]">Our development team based in UK, US, and Europe is comprised of:</div>
         <div className="p-4 text-white sm:flex sm:w-full sm:justify-center m:items-between">
-          <div className="grid grid-cols-3 sm:grid-cols-1 gap-4 w-[550px]">
-            <ul className="list-disc space-y-2">
+          <div className="grid grid-cols-3 sm:grid-cols-1 gap-4 w-[600px]">
+            <ul className="list-disc space-y-2 min-w-[175px]">
               <li>iOS/Android Developers</li>
               <li>DevOps Engineers</li>
               <li>UI/UX Designers</li>
             </ul>
-            <ul className="list-disc space-y-2">
+            <ul className="list-disc space-y-2 min-w-[175px]">
               <li>Blockchain Developers</li>
               <li>Full Stack Developers</li>
               <li>Project Manager</li>
             </ul>
-            <ul className="list-disc space-y-2">
+            <ul className="list-disc space-y-2 min-w-[175px]">
               <li>Testers</li>
               <li>Web Developers</li>
             </ul>
