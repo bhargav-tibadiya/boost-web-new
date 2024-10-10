@@ -752,7 +752,7 @@ const Home = () => {
               return (
                 <div key={index} className="flex flex-col items-center justify-start w-[256px]">
                   <img className="size-[175px]" src={member.image} alt="" />
-                  <div className="text-[32px] mt-[8px] leading-[32px] text-center font-[Thunder] font-[800] text-[#ffffff] uppercase">{member.name}</div>
+                  <div className="text-[32px] mt-[8px] leading-[32px] text-center tracking-[0.02em] font-[Thunder] font-[800] text-[#ffffff] uppercase">{member.name}</div>
                   <div className="text-[20px] mt-[8px] leading-[24px] text-center w-[220px] font-[700] text-[#ffffff]">{member.role}</div>
                   {
                     expandedStates[index] ?
@@ -865,10 +865,10 @@ const Home = () => {
 
               <div className="flex pb-[24px]">
                 <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
-                  <img className="w-[30px] h-[30px]" src={XIcon} alt="" />
+                  <img className="w-[30px] h-[30px]" src={XIconW} alt="" />
                 </a>
                 <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[40px] w-[40px]">
-                  <img className="w-[35px] h-[30px]" src={TelegramIcon} alt="" />
+                  <img className="w-[35px] h-[30px]" src={TelegramIconW} alt="" />
                 </a>
               </div>
 
