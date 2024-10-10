@@ -328,6 +328,7 @@ const Home = () => {
     new Array(teamData.length).fill(false)
   );
   const [activeAccordion, setActiveAccordion] = useState(null);
+  const [walletConnected, setWalletConnected] = useState(false);
   const targetDate = new Date("2024-12-31T23:59:59");
   const navigate = useNavigate();
 
@@ -556,7 +557,10 @@ const Home = () => {
                 </div>
 
                 <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] sm:text-[14px] min-w-[175px] w-[75%] sm:w-fit sm:mt-[8px] text-center h-fit cursor-pointer leading-[20px] font-[700] px-[40px] py-[12px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
-                  BUY $BOOST TOKEN
+                  {
+                    walletConnected ?
+                      "BUY $BOOST TOKEN" : "CONNECT WALLAT"
+                  }
                 </div>
 
               </div>
