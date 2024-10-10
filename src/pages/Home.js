@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import homeBg from "../resources/images/home_page_bg.png";
 import homeBgMobile from "../resources/images/home_texture_bg.png";
 
@@ -334,6 +334,18 @@ const Home = () => {
   //   navigate("/boost-buy");
   // };
 
+  const targetDivRef = useRef(null);
+
+  const handleButtonClick = () => {
+    // Scroll to the div
+    if (targetDivRef.current) {
+      targetDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Optional: If you also want to navigate to a different route
+    // navigate("/new-page"); 
+  };
+
   const toggleContent = (index) => {
     const newExpandedStates = [...expandedStates];
     newExpandedStates[index] = !newExpandedStates[index];
@@ -421,7 +433,7 @@ const Home = () => {
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stake')}>STAKE</div>
-            <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/faq')}>FAQ</div>
+            <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => handleButtonClick()}>FAQ</div>
           </div>
 
           {/* Connect Wallat Button */}
@@ -775,7 +787,7 @@ const Home = () => {
 
       {/* FAQS */}
 
-      <div className="w-full relative z-10 text-center mt-[200px] sm:mt-[50px] mb-[56px] font-[Thunder] text-[56px] leading-[60px] sm:text-[32px] sm:leading-[36px] font-[600] text-[#ffffff]">
+      <div ref={targetDivRef} className="w-full relative z-10 text-center mt-[200px] sm:mt-[50px] mb-[56px] font-[Thunder] text-[56px] leading-[60px] sm:text-[32px] sm:leading-[36px] font-[600] text-[#ffffff]">
         Frequently Asked Questions
       </div>
       <div className="flex flex-col gap-[30px] sm:gap-[25px] w-full px-[200px] sm:px-[0]">
