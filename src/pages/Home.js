@@ -24,9 +24,14 @@ import Navbar from "../components/Navbar";
 import BoostBig from "../resources/images/boost_big.png";
 import BuyBoostNow from "../resources/images/buy_boost_now.png";
 import BoostLaunchpad from "../resources/images/boost_launchpad.png";
-import SafeForgeBG from "../resources/images/safeforge_bg.png";
+import SafeForgeBGLive from "../resources/images/safeforge_bg.png";
 import HyperionBG from "../resources/images/hyperion_bg.png";
 import RFBG from "../resources/images/rf_bg.png";
+
+import SafeForgeBG from "../resources/images/safeforge_soon.png";
+import HyperionBGLive from "../resources/images/hyperion_live.png";
+import RFBGLive from "../resources/images/noir_live.png";
+
 import WebIcon from "../resources/images/web_icon.png";
 import XIcon from "../resources/images/x_icon.png";
 import FBIcon from "../resources/images/facebook_icon.png";
@@ -223,10 +228,11 @@ const launchpadData = [
     price: 'TBA',
     date: 'TBA',
     pic: SafeForgeBG,
+    piclive: SafeForgeBGLive,
     cat1: 'Trading',
     cat2: 'Crypto',
     cat3: 'Defi',
-    isLive: true,
+    isLive: false,
     path: '/launchpad/project/safeforge'
   },
   {
@@ -236,6 +242,7 @@ const launchpadData = [
     price: 'TBA',
     date: 'TBA',
     pic: HyperionBG,
+    piclive: HyperionBGLive,
     cat1: 'Physical',
     cat2: 'NFT',
     cat3: 'Marketplace',
@@ -250,6 +257,7 @@ const launchpadData = [
     price: 'TBA',
     date: 'TBA',
     pic: RFBG,
+    piclive: RFBGLive,
     cat1: 'Physical',
     cat2: 'NFT',
     cat3: 'Marketplace',
@@ -610,7 +618,7 @@ const Home = () => {
                     <div className="flex flex-col w-full h-full">
                       {/* <!-- Header Section --> */}
                       <div className="flex justify-between items-center">
-                        <img src={project.pic} alt="Logo" className="w-full" />
+                        <img src={`${project.isLive ? project.piclive : project.pic}`} alt="Logo" className="w-full" />
                       </div>
 
                       {/* <!-- Card Body --> */}
