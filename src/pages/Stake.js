@@ -8,9 +8,14 @@ import StartStacking from '../resources/images/startstacking.png'
 import { LogoFull } from "../resources/svg/Global"
 import AppStore from '../resources/images/app_store.png'
 import PlayStore from '../resources/images/play_store.png'
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { IoCloseSharp } from "react-icons/io5"
 import { RxHamburgerMenu } from "react-icons/rx"
+
+import boost_big2 from '../resources/images/boost_big2.png'
+import nav_bg from '../resources/images/nav_bg.png'
+import XIconW from '../resources/images/x-white.png'
+import TelegramIconW from '../resources/images/tele-white.png'
 
 
 const Stake = () => {
@@ -19,6 +24,19 @@ const Stake = () => {
 
   const [isMenuActive, setIsMenuActive] = useState(false);
 
+  const targetDivRef = useRef(null);
+
+  const handleButtonClick = () => {
+    // Scroll to the div
+    if (targetDivRef.current) {
+      targetDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Optional: If you also want to navigate to a different route
+    // navigate("/new-page"); 
+  };
+
+
 
   return (
     <div className="stack_container box-border relative z-0 min-h-[100vh] max-w-[100vw] overflow-hidden bg-[#002452] px-[120px] sm:px-[20px]">
@@ -26,41 +44,53 @@ const Stake = () => {
 
       <div className="w-full relative z-[500]">
         {/* Navbar  */}
-        <div className="max-w-[100vw] relative z-[5000] text-[#ffffff] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+        <div className="max-w-[100vw] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
 
           {/* Navbar Menus */}
-          <div className="flex flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
+          <div className="flex relative z-[000] flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
             <div className="cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stake')}>STAKE</div>
-            <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/#faq')}>FAQ</div>
+            <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => handleButtonClick()}>FAQ</div>
           </div>
 
           {/* Connect Wallat Button */}
           <div className="flex items-center justify-center h-full sm:text-[14px] cursor-pointer font-[700]">
             <div className="flex items-center justify-center h-full gap-[12px]">
-              <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#239FDB] shadow-[#198DC4] border-[1px] border-[#198DC4] shadow-[2.4px_1.6px_0_0]">
-                <img className="w-[18px] h-[18px]" src={TelegramIcon} alt="" />
+              <a href="https://t.me/boostlaunchpad" className="sm:hidden flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#239FDB] shadow-[#198DC4] border-[1px] border-[#198DC4] shadow-[2.4px_1.6px_0_0]">
+                <img className="w-[18px] h-[18px]" src={TelegramIconW} alt="" />
               </a>
-              <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#2B2B2B] shadow-[#222222] border-[1px] border-[#222222] shadow-[2.4px_1.6px_0_0]">
-                <img className="w-[18px] h-[18px]" src={XIcon} alt="" />
+              <a href="https://x.com/boost_social_" className="sm:hidden flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#2B2B2B] shadow-[#222222] border-[1px] border-[#222222] shadow-[2.4px_1.6px_0_0]">
+                <img className="w-[18px] h-[18px]" src={XIconW} alt="" />
               </a>
 
-              <div className={`sm:flex hidden size-[32px] text-[18px] bg-[#000000] rounded-[25px] items-center justify-center`} onClick={() => { setIsMenuActive(prev => !prev) }}>
-                {isMenuActive ? <IoCloseSharp /> : <RxHamburgerMenu />}
+              <div className={`sm:flex hidden relative z-[1000] size-[32px] text-[18px] text-[#ffffff] rounded-[25px] items-center justify-center`} onClick={() => { setIsMenuActive(prev => !prev) }}>
+                {isMenuActive ? <IoCloseSharp size={32} /> : <RxHamburgerMenu size={32} color="" />}
               </div>
             </div>
           </div>
 
         </div>
 
-        <div className={`absolute z-[500] ${isMenuActive ? 'flex' : 'hidden'} top-0 left-[-20px] w-[100vw] bg-[#002452] h-[450px]`} >
-          <div className="flex flex-col w-full items-center justify-center gap-[24px] sm:gap-[8px]">
+        <div className={`absolute z-[500] ${isMenuActive ? 'flex' : 'hidden'} top-0 left-[-20px] w-[100vw] bg-[#002452] h-[850px]`} >
+          <div className="flex z-[600] relative flex-col w-full items-center justify-center gap-[24px] sm:gap-[24px]">
+            <div className="cursor-pointer max-h-[48px] mb-[54px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[60px] sm:max-h-[72px] sm:min-w-[60px] sm:min-h-[72px]" onClick={() => navigate('/')} src={boost_big2} alt="" /></div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/stake')}>STAKE</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/#faq')}>FAQ</div>
+            <div className="hidden sm:flex sm:w-full mt-[24px] sm:items-center sm:justify-center gap-[18px]">
+              <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[48px] w-[48px] rounded-[50px] bg-[#239FDB] shadow-[#198DC4] border-[1px] border-[#198DC4] shadow-[2.4px_1.6px_0_0]">
+                <img className="w-[32px] h-[32px]" src={TelegramIconW} alt="" />
+              </a>
+              <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[48px] w-[48px] rounded-[50px] bg-[#2B2B2B] shadow-[#222222] border-[1px] border-[#222222] shadow-[2.4px_1.6px_0_0]">
+                <img className="w-[36px] h-[36px]" src={XIconW} alt="" />
+              </a>
+            </div>
+          </div>
+          <div className="absolute z-[-100]">
+            <img className="h-[850px]" src={nav_bg} alt="" />
           </div>
         </div>
 
