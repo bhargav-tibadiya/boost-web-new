@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import homeBg from "../resources/images/home_page_bg.png";
+import lightsbg from "../resources/images/lights.png";
 import homeBgMobile from "../resources/images/home_texture_bg.png";
 
 import Slider1 from "../resources/images/polygon_slider.png";
@@ -43,12 +44,18 @@ import PlayStore from '../resources/images/play_store.png'
 import TelegramIcon from '../resources/images/telegram_icon.png'
 import logoImage from '../resources/images/logo.png'
 import Boost2 from '../resources/images/boost_line2.png'
+import Boost_2 from '../resources/images/boost_2.png'
+import Boost_3 from '../resources/images/boost_3.png'
+import Boost_4 from '../resources/images/boost_4.png'
+import Boost_5 from '../resources/images/boost_5.png'
+import Boost_6 from '../resources/images/boost_6.png'
+import Boost_7 from '../resources/images/boost_7.png'
 
 import XIconW from '../resources/images/x-white.png'
 import TelegramIconW from '../resources/images/tele-white.png'
 
 import { BNBLogo, CARDLogo, USDTLogo, LogoFull } from "../resources/svg/Global"
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -339,6 +346,7 @@ const Home = () => {
   const [walletConnected, setWalletConnected] = useState(false);
   const targetDate = new Date("2024-12-31T23:59:59");
   const navigate = useNavigate();
+  const location = useLocation();
 
   // const handleBoostBuy = () => {
   //   navigate("/boost-buy");
@@ -407,6 +415,12 @@ const Home = () => {
     return () => clearTimeout(timer);
   });
 
+  useEffect(() => {
+    if (location.hash === '#faq' && targetDivRef.current) {
+      targetDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
+
   const timerComponents = [];
 
   Object.keys(timeLeft).forEach((interval) => {
@@ -430,8 +444,11 @@ const Home = () => {
 
   return (
     <div className="overfolow-hidden box-border bg-[#002452] px-[120px] sm:px-[20px] sm:max-w-[100vw] relative z-100">
-      <div className="texture_bg absolute z-[0] overflow-visible top-0 left-0">
+      <div className="sm:hidden texture_bg absolute z-[0] overflow-visible top-0 left-0">
         <img src={homeBg} alt="homeBg" />
+      </div>
+      <div className="hidden sm:flex texture_bg absolute z-[0] overflow-visible top-0 left-0">
+        <img src={lightsbg} alt="homeBg" />
       </div>
       <div className="w-full relative z-[500]">
         {/* Navbar  */}
@@ -469,7 +486,7 @@ const Home = () => {
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/stake')}>STAKE</div>
-            <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/faq')}>FAQ</div>
+            <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/#faq')}>FAQ</div>
           </div>
         </div>
 
@@ -480,16 +497,26 @@ const Home = () => {
         <div className="flex sm:flex-col items-start justify-center w-full h-full gap-[60px] py-[70px] sm:py-[14px]">
 
           {/* Left   */}
-          <div className="flex flex-col h-full max-w-[500px] sm:max-w-[375px] items-start sm:box-border justify-start sm:items-center sm:justify-center sm:px-[15px]">
+          <div className="flex flex-col h-full max-w-[500px] sm:max-w-[100%] items-start sm:box-border justify-start sm:items-center sm:justify-center sm:px-[15px]">
+
             <div className="pt-[75px] sm:pt-[15px] flex flex-col items-start justify-start">
               <img className="scale-85 sm:scale-75" src={BoostBig} alt="" />
             </div>
-            <div className="text-[32px] leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
+
+            <div className="text-[32px] sm:hidden leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
               <img className="sm:scale-75" src={Boost2} />
             </div>
-            <div className="px-[24px] sm:text-[14px] py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[375px] text-[#ffffff] border-[1px] rounded-[50px] bg-[#ffffff1f] mt-[56px] sm:mt-[24px]">
-              Contract Address:
-              0x18a8bd1fe17a1bb9ffb39ecd83e9489cfd17a022
+
+            <div className="px-[24px] sm:text-[16px] sm:flex sm:flex-col sm:leading-[24px] sm:text-center py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[100%] text-wrap text-[#ffffff] sm:border-0 sm:bg-transparent border-[1px] rounded-[50px] bg-[#ffffff1f] mt-[56px] sm:mt-[24px]">
+              <span className="sm:w-full">Contract Address:</span>
+              <span className="sm:w-full sm:text-wrap sm:flex sm:flex-col sm:font-[700]">
+                <span>
+                  0x0000000000000000000
+                </span>
+                <span>
+                  000000000000000000000
+                </span>
+              </span>
             </div>
           </div>
 
@@ -567,12 +594,16 @@ const Home = () => {
                 <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] sm:text-[14px] min-w-[175px] w-[75%] sm:w-fit sm:mt-[8px] text-center h-fit cursor-pointer leading-[20px] font-[700] px-[40px] py-[12px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
                   {
                     walletConnected ?
-                      "BUY $BOOST TOKEN" : "CONNECT WALLAT"
+                      "BUY $BOOST TOKEN" : "CONNECT WALLET"
                   }
                 </div>
 
               </div>
             </div>
+          </div>
+
+          <div className="text-[32px] hidden sm:flex leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
+            <img className="w-full" src={Boost_2} />
           </div>
 
         </div>
@@ -602,9 +633,13 @@ const Home = () => {
         </div>
 
         <div className="w-full flex flex-col items-center justify-between">
-          <div className="sm:scale-[75%]">
+          <div className="sm:scale-[75%] sm:hidden">
             <img src={BoostLaunchpad} alt="" className="w-full" />
           </div>
+          <div className="w-full hidden sm:flex sm:p-[17px]">
+            <img src={Boost_3} alt="" className="w-full" />
+          </div>
+
           <div className="pt-[8px] text-[18px] sm:text-[16px] leading-[28px] sm:leading-[20px] sm:text-center font-[400] text-[#ffffff] max-w-[650px]">
             BOOST Launchpad democratises access to new Web3 project launches.  Participate in exciting projects exclusively on our platform.
           </div>
@@ -701,16 +736,25 @@ const Home = () => {
 
       {/* Social Section */}
       <div className="flex flex-col relative overflow-visible items-center justify-center z-1 pt-[250px] sm:pt-[75px]">
-        <div className="w-full flex items-center justify-center sm:scale-[75%]" >
+        <div className="w-full flex items-center justify-center sm:scale-[75%] sm:hidden" >
           <img src={BoostSocialApp} alt="" />
         </div>
-        <div className="mt-[16px] max-w-[900px] text-[20px] leading-[30px] sm:text-[16px] sm:leading-[20px] font-[400] text-[#ffffff]">Projects launched via BOOST's Launchpad will benefit from BOOST's Web3 social platform that fosters deeper engagement between Brands, Creators, and Fans. This social element helps build strong communities after a Project is launched, transforms interaction and collaboration, delivers added value via AI matching, gamifies content creation, and rewards users for their participation.</div>
-        <div className="mt-[40px]">
+        <div className="w-full items-center justify-center sm:p-[17px] hidden sm:flex" >
+          <img src={Boost_4} alt="" />
+        </div>
+        <div className="mt-[16px] max-w-[900px] sm:hidden text-[20px] leading-[30px] sm:text-[16px] sm:leading-[20px] font-[400] text-[#ffffff]">Projects launched via BOOST's Launchpad will benefit from BOOST's Web3 social platform that fosters deeper engagement between Brands, Creators, and Fans. This social element helps build strong communities after a Project is launched, transforms interaction and collaboration, delivers added value via AI matching, gamifies content creation, and rewards users for their participation.</div>
+
+        <div className="mt-[40px] sm:hidden">
           <img src={BoostSocialIll} alt="" />
         </div>
 
-        <div className="-translate-y-[100px] flex flex-col w-full items-center justify-center">
-          <div className="flex flex-row items-center justify-center gap-[14px]">
+        <div className="mt-[40px] sm:w-[775px] hidden sm:flex">
+          <img src={Boost_5} alt="" />
+        </div>
+
+
+        <div className="-translate-y-[100px] sm:-translate-y-[0px] flex flex-col w-full items-center justify-center">
+          <div className="flex flex-row sm:!flex-col sm:scale-125 items-center justify-center gap-[14px]">
             <img src={AppStore} alt="" />
             <img src={PlayStore} alt="" />
           </div>
@@ -722,22 +766,25 @@ const Home = () => {
 
 
 
-        <div className="absolute w-[100vw] scale-150 sm:scale-100 h-[1200px] bg-[url('./resources/images/social_bg.png')] bg-center bg-no-repeat bg-cover top-[450px] sm:top-[25px] z-[-1]">
+        <div className="absolute sm:hidden w-[100vw] scale-150 sm:scale-100 h-[1200px] bg-[url('./resources/images/social_bg.png')] bg-center bg-no-repeat bg-cover top-[450px] sm:top-[25px] z-[-1]">
         </div>
 
       </div>
 
       {/* Ecosystem */}
       <div className="flex flex-col mt-[100px] relative overflow-visible items-center justify-center z-150">
-        <img className="relative z-[151]" src={Ecosystem} alt="Ecosystem" />
-        <div className="absolute w-[100vw] h-[1500px] sm:scale-y-[50%] bg-[url('./resources/images/ecosystem_bg.png')] bg-center scale-100 opacity-35 bg-no-repeat bg-cover z-[0]">
+        <img className="relative hidden sm:flex z-[151]" src={Boost_6} alt="Ecosystem" />
+        <img className="relative sm:hidden flex z-[151]" src={Ecosystem} alt="Ecosystem" />
+        <img className="relative sm:flex hidden sm:pt-[50px] z-[151]" src={Boost_7} alt="Ecosystem" />
+
+        <div className="absolute sm:top-[650px] w-[100vw] h-[1500px] sm:h-[2000px] bg-[url('./resources/images/ecosystem_bg.png')] bg-center scale-100 opacity-35 bg-no-repeat bg-cover z-[0]">
         </div>
       </div>
 
       <div className="w-full flex items-center justify-center">
-        <div className="flex items-center justify-center flex-col w-[1000px] sm:w-[350px] px-[154px] sm:px-[24px] py-[96px] sm:py-[24px] mt-[200px] rounded-[64px] gap-[40px] sm:gap-[20px] sm:bg-none bg-center bg-[url('./resources/images/claim_bg.png')] border-[1px] border-[#ffffff1f]">
-          <div className="text-[56px] leading-[60px] sm:text-[32px] sm:leading-[40px] font-[Thunder] font-[600] text-[#ffffff]">How to Claim your Tokens</div>
-          <div className="text-[20px] leading-[30px] sm:text-[14px] sm:leading-[20px] font-[400] text-[#ffffff] text-center">Tokens will be available to claim on 00/00/0000 by clicking the “Claim Tokens” button below. You will not be able to claim your token until the specified date above <br /> Note: After purchase, you can connect your wallet and see your balance allocation in the Buy box under "Balance".</div>
+        <div className="flex items-center justify-center flex-col w-[1000px] sm:w-[350px] px-[154px] py-[96px] sm:p-[40px] mt-[200px] rounded-[64px] sm:rounded-[24px] gap-[40px] sm:gap-[20px] bg-center bg-[url('./resources/images/claim_bg.png')] border-[1px] border-[#ffffff1f]">
+          <div className="text-[56px] leading-[60px] sm:text-[40px] sm:leading-[44px] sm:text-center font-[Thunder] font-[600] text-[#ffffff]">How to Claim your Tokens</div>
+          <div className="text-[20px] leading-[30px] sm:text-[16px] sm:leading-[24px] font-[400] text-[#ffffff] text-center">Tokens will be available to claim on 00/00/0000 by clicking the “Claim Tokens” button below. You will not be able to claim your token until the specified date above <br /> Note: After purchase, you can connect your wallet and see your balance allocation in the Buy box under "Balance".</div>
           <div className="flex items-center justify-center px-[32px] sm:px-[16px] py-[16px] sm:py-[8px] text-[24px] leading-[28px] sm:text-[18px] sm:leading-[20px] font-[700] w-[250px] bg-[#BABABA] border-solid border-2 border-[#818181] rounded-[100px] shadow-[#818181] shadow-[10px_8px_0_0] sm:shadow-[5px_4px_0_0]">CLAIM TOKEN</div>
         </div>
       </div>
@@ -745,7 +792,7 @@ const Home = () => {
       {/* Team */}
       <div className="flex flex-wrap items-center justify-between mt-[200px] sm:mt-[100px] px-[115px] sm:px-[0px] w-full">
         <div className="text-[56px] leading-[60px] font-[Thunder] font-[600] text-[#ffffff] w-full text-center sm:py-[15px]">MEET THE TEAM</div>
-        <div className="flex flex-wrap items-center justify-center mt-[48px] gap-[72px] sm:gap-[16px]">
+        <div className="flex flex-wrap items-start justify-center mt-[48px] gap-[72px] sm:gap-[40px]">
 
           {
             teamData.map((member, index) => {
@@ -775,11 +822,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex relative z-10 flex-col items-center justify-center mt-[72px]">
-        <div className="text-[32px] leading-[36px] font-[800] text-[#ffffff]">DEVELOPMENT TEAM</div>
+      <div className="flex relative z-10 flex-col items-center sm:px-[40px] justify-center mt-[72px]">
+        <div className="text-[32px] sm:text-[30px] sm:text-center leading-[36px] font-[800] text-[#ffffff]">DEVELOPMENT TEAM</div>
         <div className="text-[16px] leading-[20px] font-[700] text-[#ffffff] mt-[16px] mb-[10px]">Our development team based in UK, US, and Europe is comprised of:</div>
-        <div className="p-4 text-white sm:flex sm:w-full sm:justify-center m:items-between">
-          <div className="grid grid-cols-3 sm:grid-cols-1 gap-4 w-[600px]">
+        <div className="p-4 sm:px-[40px] sm:text-[14px] sm:leading-[18px] font-[400] text-white sm:flex sm:w-full sm:justify-center m:items-between">
+
+          <div className="grid grid-cols-3 sm:grid-cols-1 sm:!gap-[8px] sm:!w-[100%] sm:max-w-[165px] gap-4 w-[600px]">
             <ul className="list-disc space-y-2 min-w-[175px]">
               <li>iOS/Android Developers</li>
               <li>DevOps Engineers</li>
@@ -795,12 +843,13 @@ const Home = () => {
               <li>Web Developers</li>
             </ul>
           </div>
+
         </div>
       </div>
 
       {/* FAQS */}
 
-      <div ref={targetDivRef} className="w-full relative z-10 text-center mt-[200px] sm:mt-[50px] mb-[56px] font-[Thunder] text-[56px] leading-[60px] sm:text-[32px] sm:leading-[36px] font-[600] text-[#ffffff]">
+      <div ref={targetDivRef} id="faq" className="w-full relative z-10 text-center mt-[200px] sm:mt-[120px] mb-[56px] sm:mb-[40px] font-[Thunder] text-[56px] leading-[60px] sm:text-[40px] sm:leading-[48px] sm:px-[25px] font-[600] text-[#ffffff]">
         Frequently Asked Questions
       </div>
       <div className="flex flex-col gap-[30px] sm:gap-[25px] w-full px-[200px] sm:px-[0]">
@@ -809,9 +858,9 @@ const Home = () => {
             {activeAccordion === index ? (
               <>
                 <div className="bg-[#ffffff] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#000000] w-full rounded-[12px]">
-                  <div className="absolute z-[-1] h-[82px] sm:h-[48px] bg-[#000000] border-[2px] px-[32px] py-[20px] border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]"></div>
+                  <div className={`absolute z-[-1] h-[82px] sm:h-[48px] bg-[#000000] border-[2px] px-[32px] ${index === (1 || 2 || 5) ? 'py-[62px]' : 'py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
                   <div className="flex flex-row justify-between items-center relative z-[100]">
-                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[22px] sm:leading-[20px] text-[#002452] font-[500]">{que.que}</span>
+                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#002452] font-[500]">{que.que}</span>
                     <span
                       onClick={() => handleToggleCollapse(index)}
                       className="text-[32px] font-[Thunder] leading-[34px] text-[#002452] font-[500] cursor-pointer"
@@ -827,9 +876,9 @@ const Home = () => {
             ) : (
               <>
                 <div className="bg-[#0C59BF] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#ffffff] w-full rounded-[12px]">
-                  <div className="absolute z-[-1] h-[82px] sm:h-[48px] bg-[#023A84] border-[2px] px-[32px] py-[20px] border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]"></div>
+                  <div className={`absolute z-[-1] h-[82px] sm:h-[48px] bg-[#002452] border-[2px] px-[32px] ${(index == 1 || index == 2 || index == 5) ? 'py-[56px]' : 'py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
                   <div className="flex flex-row justify-between items-center relative z-[100]">
-                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[22px] sm:leading-[20px] text-[#ffffff] font-[500]">{que.que}</span>
+                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#ffffff] font-[500]">{que.que}</span>
                     <span
                       onClick={() => handleToggleCollapse(index)}
                       className="text-[32px] font-[Thunder] leading-[34px] text-[#ffffff] font-[500] cursor-pointer"
@@ -843,27 +892,46 @@ const Home = () => {
           </div>
         ))}
       </div>
+      
+      <div className="sm:flex flex-col items-center justify-center py-[40px] hidden">
+
+        <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] sm:text-[14px] min-w-[175px] w-[75%] sm:w-fit sm:mt-[8px] text-center h-fit cursor-pointer leading-[20px] font-[700] px-[40px] py-[12px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
+          {
+            walletConnected ?
+              "BUY $BOOST TOKEN" : "CONNECT WALLET"
+          }
+        </div>
+      </div>
 
       {/* <Footer /> */}
 
       <div className="py-[56px] text-[#ffffff] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
 
-        <div className="flex flex-row w-full relative z-[10] top-0">
+        <div className="flex flex-row sm:!flex-col sm:items-center w-full relative z-[10] top-0">
 
-          <div className="flex flex-col items-start mb-4 w-[50%]">
+          <div className="flex flex-col items-start sm:items-center mb-4 w-[50%] sm:w-full">
             <LogoFull />
-            <a href="#" className="hover:underline py-[12px] ext-[16px] leading-[20px] font-[700] text-[#ffffff]">Read Whitepaper</a>
-            <div className="flex sm:flex-col text-[16px] leading-[20px] font-[400] gap-[24px] sm:gap-[8px]">
+            <a href="#" className="hover:underline py-[12px] ext-[16px] leading-[20px] sm:pt-[48px] font-[700] text-[#ffffff]">Read Whitepaper</a>
+            <div className="flex sm:flex-col text-center text-[16px] leading-[20px] font-[400] gap-[24px] sm:gap-[16px]">
               <a href="#" className="hover:underline">Privacy Policy</a>
               <a href="#" className="hover:underline">Cookie Policy</a>
               <a href="#" className="hover:underline">Disclaimer</a>
             </div>
+
+            <div className="pt-[48px] pb-[24px] hidden sm:flex w-full items-center justify-center">
+                <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
+                  <img className="w-[30px] h-[30px]" src={XIconW} alt="" />
+                </a>
+                <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[40px] w-[40px]">
+                  <img className="w-[28px] h-[24px]" src={TelegramIconW} alt="" />
+                </a>
+              </div>
           </div>
 
-          <div className="flex flex-col w-[50%]">
+          <div className="flex flex-col w-[50%] sm:items-center sm:w-full">
             <div className="flex flex-col items-end">
 
-              <div className="flex pb-[24px]">
+              <div className="flex pb-[24px] sm:hidden">
                 <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
                   <img className="w-[30px] h-[30px]" src={XIconW} alt="" />
                 </a>
@@ -889,7 +957,7 @@ const Home = () => {
 
         <div className="mt-[26px] relative z-10 mb-[32px] w-full h-[1px] bg-[radial-gradient(113.21%_708.28%_at_-6.84%_100%,#ACFFB7_0%,#0BCAFF_75.45%,#1F93FF_100%)]"></div>
 
-        <p className="text-[14px] relative z-10 leading-[20px] font-[400] text-center">
+        <p className="text-[16px] relative z-10 leading-[24px] px-[24px] font-[400] text-center">
           Our token is a utility token designed to enhance user engagement by providing exclusive access to our launchpad and BOOST! social platform. It enables unique username claims and participation in content competitions. This token is intended solely for platform use and does not represent an investment or offer financial returns.
         </p>
 
@@ -899,13 +967,7 @@ const Home = () => {
 
       </div>
 
-      {/* <footer className="footer_section relative z-[0]">
-        <div className="footer_bg absolute z-[-1] bottom-0">
-          <img src={footerBg} alt="" />
-        </div>
-      </footer> */}
-
-      <div className="absolute overflow-visible w-full left-0 bottom-0 z-[0]">
+      <div className="absolute w-[1500px] overflow-visible translate-x-[-50%] bottom-0 z-[0]">
         <img src={footerBg} alt="" />
       </div>
     </div >
