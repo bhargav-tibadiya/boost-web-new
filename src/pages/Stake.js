@@ -17,6 +17,8 @@ import nav_bg from '../resources/images/nav_bg.png'
 import XIconW from '../resources/images/x-white.png'
 import TelegramIconW from '../resources/images/tele-white.png'
 
+import Boost_8 from '../resources/images/boost_8.png'
+
 
 const Stake = () => {
 
@@ -99,11 +101,12 @@ const Stake = () => {
       {/* Start Stacking */}
       <div className="px-[70px] py-[72px] sm:!flex-col sm:p-[5px] sm:mt-[25px] sm:gap-[25px] flex flex-row justify-between sm:justify-center sm:items-center">
         <div className="flex sm:!flex-col justify-start items-center">
-          <img src={StackBoost} className="scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
+          <img src={StackBoost} className="sm:hidden flex scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
+          <img src={Boost_8} className="sm:flex hidden scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
         </div>
 
         <div className="flex items-center justify-center px-[20px] py-[20px] sm:p-[10px] max-w-[550px] min-w-[420px] sm:max-w-[350px] sm:min-w-[300px] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative p-4 border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
-          <div className="flex flex-col w-full items-center justify-center py-[48px] px-[32px] sm:py-[24px] sm:px-[16px] rounded-[48px] bg-[#ffffff]">
+          <div className="flex flex-col w-full items-center justify-center py-[48px] px-[32px] sm:py-[15px] sm:px-[16px] rounded-[48px] bg-[#ffffff]">
 
             <img className="" src={StartStacking} alt="" />
 
@@ -166,9 +169,9 @@ const Stake = () => {
       </div>
 
       <div className="w-[100%] box-border flex flex-col items-center justify-center my-[135px] px-[160px] sm:p-1">
-        <div className="bg-[#ffffff3D] flex flex-col items-center justify-center p-[64px] sm:p-[24px] rounded-[48px] border-[3px] border-[#eeeeee3d]">
-          <div className="text-[40px] leading-[50px] sm:text-[28px] sm:leading-[30px] sm:text-center font-[700] text-[#ffffff]">Are you spearheading a project that's setting the next era of innovation?</div>
-          <div className="text-[16px] leading-[20px] font-[400] text-center mt-[24px] text-[#ffffff]">Contact us today to explore the launch possibilities with BOOST Ignition's collaborative incubation and funding solutions. Join the BOOST community—one of the most expansive and dynamic networks in the industry—and unlock a world of opportunities.</div>
+        <div className="bg-[#ffffff3D] flex flex-col items-center justify-center p-[64px] sm:px-[20px] sm:py-[24px] rounded-[48px] border-[3px] border-[#eeeeee3d]">
+          <div className="text-[40px] leading-[50px] sm:text-[18px] sm:leading-[24px] sm:text-center font-[700] text-[#ffffff]">Are you spearheading a project that's setting the next era of innovation?</div>
+          <div className="text-[16px] leading-[20px] sm:text-[12px] sm:leading-[18px] font-[400] text-center mt-[24px] text-[#ffffff]">Contact us today to explore the launch possibilities with BOOST Ignition's collaborative incubation and funding solutions. Join the BOOST community—one of the most expansive and dynamic networks in the industry—and unlock a world of opportunities.</div>
           <div className="text-[24px] sm:text-[18px] min-w-[175px] px-[20px] py-[12px] sm:py-[6px] text-center h-fit mt-[32px] cursor-pointer leading-[28px] font-[700] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
             LAUNCH PROJECT
           </div>
@@ -185,29 +188,38 @@ const Stake = () => {
       </div>
 
       {/* Footer */}
-      <div className=" text-[#ffffff] py-[56px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
+      <div className="py-[56px] text-[#ffffff] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
 
-        <div className="flex flex-row w-full relative z-[10] top-0">
+        <div className="flex flex-row sm:!flex-col sm:items-center w-full relative z-[10] top-0">
 
-          <div className="flex flex-col items-start mb-4 w-[50%]">
+          <div className="flex flex-col items-start sm:items-center mb-4 w-[50%] sm:w-full">
             <LogoFull />
-            <a href="#" className="hover:underline py-[12px] ext-[16px] leading-[20px] font-[700] text-[#fffff]">Read Whitepaper</a>
-            <div className="flex sm:flex-col text-[16px] leading-[20px] font-[400] gap-[24px] sm:gap-[8px]">
+            <a href="#" className="hover:underline py-[12px] ext-[16px] leading-[20px] sm:pt-[48px] font-[700] text-[#ffffff]">Read Whitepaper</a>
+            <div className="flex sm:flex-col text-center text-[16px] leading-[20px] font-[400] gap-[24px] sm:gap-[16px]">
               <a href="#" className="hover:underline">Privacy Policy</a>
               <a href="#" className="hover:underline">Cookie Policy</a>
               <a href="#" className="hover:underline">Disclaimer</a>
             </div>
+
+            <div className="pt-[48px] pb-[24px] hidden sm:flex w-full items-center justify-center">
+              <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
+                <img className="w-[30px] h-[30px]" src={XIconW} alt="" />
+              </a>
+              <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[40px] w-[40px]">
+                <img className="w-[28px] h-[24px]" src={TelegramIconW} alt="" />
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-col w-[50%]">
+          <div className="flex flex-col w-[50%] sm:items-center sm:w-full">
             <div className="flex flex-col items-end">
 
-              <div className="flex pb-[24px]">
+              <div className="flex pb-[24px] sm:hidden">
                 <a href="https://x.com/boost_social_" className="flex items-center justify-center h-[40px] w-[40px]">
-                  <img className="w-[30px] h-[30px]" src={XIcon} alt="" />
+                  <img className="w-[30px] h-[30px]" src={XIconW} alt="" />
                 </a>
                 <a href="https://t.me/boostlaunchpad" className="flex items-center justify-center h-[40px] w-[40px]">
-                  <img className="w-[35px] h-[30px]" src={TelegramIcon} alt="" />
+                  <img className="w-[35px] h-[30px]" src={TelegramIconW} alt="" />
                 </a>
               </div>
 
@@ -225,9 +237,10 @@ const Stake = () => {
 
         </div>
 
+
         <div className="mt-[26px] relative z-10 mb-[32px] w-full h-[1px] bg-[radial-gradient(113.21%_708.28%_at_-6.84%_100%,#ACFFB7_0%,#0BCAFF_75.45%,#1F93FF_100%)]"></div>
 
-        <p className="text-[14px] relative z-10 leading-[20px] font-[400] text-center">
+        <p className="text-[16px] relative z-10 leading-[24px] px-[24px] font-[400] text-center">
           Our token is a utility token designed to enhance user engagement by providing exclusive access to our launchpad and BOOST! social platform. It enables unique username claims and participation in content competitions. This token is intended solely for platform use and does not represent an investment or offer financial returns.
         </p>
 

@@ -871,7 +871,7 @@ const Home = () => {
             {activeAccordion === index ? (
               <>
                 <div className="bg-[#ffffff] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#000000] w-full rounded-[12px]">
-                  <div className={`absolute z-[-1] h-[82px] sm:h-[48px] bg-[#000000] border-[2px] px-[32px] ${index === (1 || 2 || 5) ? 'py-[62px]' : 'py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
+                  <div className={`absolute !max-h-[78px] z-[-1] sm:h-[48px] bg-[#002452] border-[2px] px-[32px] ${(index == 1 || index == 2 || index == 5) ? 'sm:py-[56px] py-[42px]' : 'sm:py-[42px] py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
                   <div className="flex flex-row justify-between items-center relative z-[100]">
                     <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#002452] font-[500]">{que.que}</span>
                     <span
@@ -889,7 +889,7 @@ const Home = () => {
             ) : (
               <>
                 <div className="bg-[#0C59BF] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#ffffff] w-full rounded-[12px]">
-                  <div className={`absolute z-[-1] h-[82px] sm:h-[48px] bg-[#002452] border-[2px] px-[32px] ${(index == 1 || index == 2 || index == 5) ? 'py-[56px]' : 'py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
+                  <div className={`absolute !max-h-[78px] z-[-1] sm:h-[48px] bg-[#002452] border-[2px] px-[32px] ${(index == 1 || index == 2 || index == 5) ? 'sm:py-[56px] py-[42px]' : 'sm:py-[42px] py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
                   <div className="flex flex-row justify-between items-center relative z-[100]">
                     <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#ffffff] font-[500]">{que.que}</span>
                     <span
@@ -980,7 +980,7 @@ const Home = () => {
 
       </div>
 
-      <div className="absolute w-[1500px] overflow-visible translate-x-[-50%] bottom-0 z-[0]">
+      <div className="absolute w-[2000px]  sm:w-[1500px] overflow-visible sm:translate-x-[-50%] left-0 bottom-0 z-[0]">
         <img src={footerBg} alt="" />
       </div>
     </div >
