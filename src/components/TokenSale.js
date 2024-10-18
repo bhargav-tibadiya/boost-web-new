@@ -23,9 +23,9 @@ const TokenSale = () => {
       </div>
 
       {/* Pool Panel */}
-      <div className="flex flex-row py-[24px] gap-[20px] sm:overflow-scroll">
+      <div className="flex flex-row sm:!flex-col sm:max-w-[100%] py-[24px] gap-[20px] sm:overflow-hidden">
 
-        <div className="px-[24px] py-[24px] min-w-[345px] border-[1px] rounded-[20px] bg-[#ffffff] border-[#d9d9d9]">
+        <div className="px-[24px] py-[24px] min-w-[365px] sm:min-w-[325px] border-[1px] rounded-[20px] bg-[#ffffff] border-[#d9d9d9]">
 
           <div className="flex flex-row items-center justify-start gap-[14px] pb-[14px]">
             <div className="flex items-center justify-center w-[32px] h-[32px] rounded-[50px] bg-[#FF4DAA]">
@@ -60,7 +60,7 @@ const TokenSale = () => {
 
         </div>
 
-        <div className="px-[24px] py-[24px] min-w-[345px] border-[1px] rounded-[20px] bg-[#ffffff] border-[#d9d9d9]">
+        <div className="px-[24px] py-[24px] min-w-[365px] sm:min-w-[325px] border-[1px] rounded-[20px] bg-[#ffffff] border-[#d9d9d9]">
 
           <div className="flex flex-row items-center justify-start gap-[14px] pb-[14px]">
             <div className="flex items-center justify-center w-[32px] h-[32px] rounded-[50px] bg-[#706AD0]">

@@ -17,21 +17,21 @@ const Vesting = () => {
 
         <div className="flex flex-row sm:!flex-col gap-[24px] sm:gap-[0px] justify-between w-full pb-[18px]">
           <div className="flex flex-col w-full">
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row sm:!flex-col justify-between">
               <span className="text-[14px] leading-[18px] font-[400]">Vesting Schedule</span>
               <span className="text-[16px] leading-[20px] font-[700]">10% TGE, 1 mo. cliff...</span>
             </div>
 
             <div className="w-full h-[1px] bg-[#d9d9d9] my-[15px]"></div>
 
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row sm:!flex-col justify-between">
               <span className="text-[14px] leading-[18px] font-[400]">Upfront Release (TGE)</span>
               <span className="text-[16px] leading-[20px] font-[700]">10% release at TBD.</span>
             </div>
 
             <div className="w-full h-[1px] bg-[#d9d9d9] my-[15px]"></div>
 
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row sm:!flex-col justify-between">
               <span className="text-[14px] leading-[18px] font-[400]">Cliff</span>
               <span className="text-[16px] leading-[20px] font-[700]">30 days</span>
             </div>
@@ -41,21 +41,21 @@ const Vesting = () => {
           <div className="hidden sm:flex w-full h-[1px] bg-[#d9d9d9] my-[15px]"></div>
 
           <div className="flex flex-col w-full">
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row sm:!flex-col justify-between">
               <span className="text-[14px] leading-[18px] font-[400]">Vesting Frequency</span>
               <span className="text-[16px] leading-[20px] font-[700]">Per 30 days</span>
             </div>
 
             <div className="w-full h-[1px] bg-[#d9d9d9] my-[15px]"></div>
 
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row sm:!flex-col justify-between">
               <span className="text-[14px] leading-[18px] font-[400]">Number of Release</span>
               <span className="text-[16px] leading-[20px] font-[700]">6</span>
             </div>
 
             <div className="w-full h-[1px] bg-[#d9d9d9] my-[15px]"></div>
 
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-row sm:!flex-col justify-between">
               <span className="text-[14px] leading-[18px] font-[400]">Total Duration</span>
               <span className="text-[16px] leading-[20px] font-[700]">180 days</span>
             </div>

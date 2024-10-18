@@ -15,6 +15,7 @@ import RestrictedCountries from "../components/RestrictedCountries"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { useNavigate, useParams } from "react-router-dom"
+import { FaChevronDown } from "react-icons/fa"
 
 const slides = [
   DisplayPic,
@@ -35,6 +36,7 @@ const Project = () => {
 
   const [sliderPosition, setSliderPosition] = useState(0)
   const [selectedPanel, setSelectedPanel] = useState(0)
+  const [isPanelOpen, setIsPanelOpen] = useState(false)
 
   const navigate = useNavigate()
   const { id } = useParams();
@@ -79,44 +81,59 @@ const Project = () => {
           <div className="w-[60%] sm:w-full sm:mb-[15px]">
 
             {/* Project Info Section */}
-            <div className="flex flex-row gap-[16px] pb-[32px]">
+            <div className="flex flex-row sm:!flex-col gap-[16px] pb-[32px] sm:pb-[8px]">
 
-              {/* Project Logo */}
-              <div className="h-[100%] flex items-center justify-center sm:items-start sm:justify-start">
-                <img className="w-[100px] h-[100px] sm:size-[50px]" src={RnFLogo} alt="" />
-              </div>
+              <div className="flex flex-row sm:flex-row gap-[16px] sm:gap-[8px]">
 
-              {/* Project Details */}
-              <div>
-                {/* Name and Tags */}
-                <div className="flex flex-row gap-[16px] items-center justify-center">
-                  <div className=" flex items-center justify-center text-[40px] sm:text-[30px] font-[Thunder] leading-[40px] sm:leading-[36px] font-[700]">SAFEFORGE</div>
-                  <div className="flex flex-row sm:flex-row gap-[6px] text-[14px] sm:text-[12px]">
-                    <span className="px-[16px] sm:px-[8px] py-[4px] sm:py-[2px] text-[#FF7A00] bg-[#FFDAAF] rounded-[4px]">Coming Soon</span>
-                    <span className="px-[16px] sm:px-[8px] py-[4px] sm:py-[2px] text-[#FF4DAA] bg-[#FFB9DD] rounded-[4px]">Private Sale</span>
+                {/* Project Logo */}
+                <div className="h-[100%] flex items-center justify-center sm:items-start sm:justify-start">
+                  <img className="w-[100px] h-[100px] min-w-[100px] sm:min-w-[32px] sm:size-[32px]" src={RnFLogo} alt="" />
+                </div>
+
+                {/* Project Details */}
+                <div className="flex w-full flex-col sm:flex-row">
+                  {/* Name and Tags */}
+                  <div className="flex flex-row gap-[16px] items-center justify-center w-full">
+                    <div className=" flex items-center text-[40px] sm:text-[30px] font-[Thunder] leading-[40px] w-full sm:leading-[36px] font-[700]">SAFEFORGE</div>
+                    <div className=" flex flex-row sm:flex-row gap-[6px] justify-between items-center text-[14px] sm:text-[12px] w-full">
+                      <span className="px-[16px] sm:leading-[12px] sm:px-[8px] py-[4px] sm:py-[4px] text-[8px] font-[500] text-[#ffffff] bg-[#26A17B] rounded-[4px]">Trading</span>
+                      <span className="px-[16px] sm:leading-[12px] sm:px-[8px] py-[4px] sm:py-[4px] text-[8px] font-[500] text-[#ffffff] bg-[#1F93FF] rounded-[4px]">Crypto</span>
+                      <span className="px-[16px] sm:leading-[12px] sm:px-[8px] py-[4px] sm:py-[4px] text-[8px] font-[500] text-[#ffffff] bg-[#948DFF] rounded-[4px]">Defi</span>
+                    </div>
                   </div>
-                </div>
 
-                {/* Descitpion */}
-                <div className="pt-[4px] pb-[12px] text-[14px] sm:text-[12px] font-[400]">
-                  The crypto portfolio that continually improves.
-                </div>
+                  {/* Descitpion */}
+                  <div className=" sm:hidden flex pt-[4px] pb-[12px] text-[14px] sm:text-[12px] font-[400]">
+                    The crypto portfolio that continually improves.
+                  </div>
 
-                {/* Socials */}
-                <div className="flex flex-row gap-[10px]">
+
+
+                  {/* Socials */}
+                  <div className="flex sm:hidden flex-row gap-[10px]">
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={WebIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={XIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={FaceBookIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={InstagramIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={ShareIcon} alt="" /></a>
+                  </div>
+
+                </div>
+              </div>
+              <div className="sm:flex w-full items-center hidden pt-[4px] pb-[12px] text-[14px] sm:text-[12px] font-[400]">
+                <div className="w-[50%] sm:text-[12px] leading-[16px]">The crypto portfolio that continually improves.</div>
+                <div className="sm:flex w-[50%] hidden flex-row items-end justify-end gap-[10px]">
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={WebIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={XIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={FaceBookIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={InstagramIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={ShareIcon} alt="" /></a>
                 </div>
-
               </div>
 
             </div>
 
-            {/* Image Slider */}
-            <div className="w-full h-[400px] sm:h-[200px] max-w-[750px] flex items-center justify-center bg-[#222222] rounded-[20px] sm:rounded-[10px] relative">
+            <div className="hidden sm:flex w-full h-[400px] sm:h-[200px] max-w-[750px] sm:mb-[12px] items-center justify-center bg-[#222222] rounded-[20px] sm:rounded-[10px] relative">
 
               <div className="w-full h-full overflow-hidden flex items-center justify-center">
 
@@ -133,8 +150,139 @@ const Project = () => {
               </div>
             </div>
 
+            <div className="w-[35%] sm:w-full flex !flex-col gap-[20px]">
+
+              {/* Sale Timer */}
+              <div className="sm:flex hidden sm:!flex-col px-[24px] py-[24px] w-full border-[#D9D9D9] border-[1px] rounded-[16px] bg-[#ffffff]">
+                <div className="font-[700] text-[#6A717D] text-[14px] leading-[18px]">SALE STARTS IN</div>
+
+                <div className="flex flex-row items-center justify-between">
+
+                  <div className="flex flex-row gap-[8px] py-[15px]">
+                    <div className="flex items-center justify-center w-[24px] h-[24px] rounded-[50px] bg-[#FF4DAA]">
+                      <img className="w-[12px] h-[15px]" src={logoImage} alt="" />
+                    </div>
+                    <div className="flex items-center justify-center font-[700] text-[16px] leading-[20px]">EARLY POOL</div>
+                  </div>
+
+                  <div>14D : 16H : 45M : 12S</div>
+
+                </div>
+
+                <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+
+                <div className="flex flex-row items-center justify-between">
+
+
+                  <div className="flex flex-row gap-[8px] py-[15px]">
+                    <div className="flex items-center justify-center w-[24px] h-[24px] rounded-[50px] bg-[#706AD0]">
+                      <img className="w-[12px] h-[15px]" src={logoImage} alt="" />
+                    </div>
+                    <div className="flex items-center justify-center font-[700] text-[16px] leading-[20px]">OPEN POOL</div>
+                  </div>
+
+                  <div>19D : 23H : 45M : 12S</div>
+
+                </div>
+
+              </div>
+
+              {/* fund raising details */}
+              <div className="hidden sm:flex flex-col px-[24px] py-[24px] w-full border-[#D9D9D9] border-[1px] rounded-[20px] bg-[#ffffff]">
+                <div className="text-[14px] leading-[18px] font-[700] text-[#6A717D] pb-[16px]">RAISE DETAILS</div>
+                <div className="font-[400] text-[#6A717D] text-[16px] leading-[20px]">Fundraise Goal:</div>
+                <div className="flex flex-row justify-between text-[48px] font-[700] pb-[15px]">
+                  <div className="font-[Thunder] text-[48px] leading-[52px] font-[700]">3,000,000</div>
+                  <div className="text-gradient font-[Thunder] leading-[52px] text-[48px] font-[700]">0%</div>
+                </div>
+
+                <div className="font-[400] text-[#6A717D] text-[16px] leading-[20px]">Current Progress:</div>
+
+                <div className="w-full h-[20px] rounded-[500px] bg-[#F2F2F2] mt-[8px] mb-[6px] border-solid border-[1px] border-[#D9D9D9]">
+                  <div className={`h-full w-[15%] relative progress-bar-gradient `}>
+                  </div>
+                </div>
+
+                <div className="flex flex-row justify-between mb-[40px]">
+                  <span>$0</span>
+                  <span>$3,000,000</span>
+                </div>
+
+                <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+
+                <div className="flex flex-col gap-[4px] my-[14px]">
+                  <span className="text-[16px] leading-[20px] text-[#6A717D] font-[400]">Token Address</span>
+                  <span className="text-[16px] leading-[20px] text-[#222222] font-[700]">TBA</span>
+                </div>
+
+                <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+
+                <div className="flex flex-row justify-between gap-[4px] my-[14px]">
+                  <span className="text-[16px] leading-[20px] text-[#6A717D] font-[400]">Price per Token</span>
+                  <span className="text-[16px] leading-[20px] text-[#222222] font-[700]">$0.05</span>
+                </div>
+
+                <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+
+                <div className="flex flex-row justify-between gap-[4px] my-[14px]">
+                  <span className="text-[16px] leading-[20px] text-[#6A717D] font-[400]">Raising on</span>
+                  <span className="text-[16px] leading-[20px] text-[#222222] font-[700]">TBA</span>
+                </div>
+
+                <div className="w-full h-[1px] bg-[#D9D9D9]"></div>
+
+                <div className="flex flex-row justify-between gap-[4px] my-[14px]">
+                  <span className="text-[16px] leading-[20px] text-[#6A717D] font-[400]">Raising in</span>
+                  <span className="text-[16px] leading-[20px] text-[#222222] font-[700]">TBA</span>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Image Slider */}
+            <div className="sm:hidden w-full h-[400px] sm:h-[200px] max-w-[750px] flex items-center justify-center bg-[#222222] rounded-[20px] sm:rounded-[10px] relative">
+
+              <div className="w-full h-full overflow-hidden flex items-center justify-center">
+
+                <div className="flex flex-row w-full h-full items-center justify-center">
+                  <img className="object-cover rounded-[20px]" src={slides[sliderPosition]} alt={`Slide ${sliderPosition + 1}`} />
+                </div>
+
+                <div className="absolute bottom-[25px] left-[25px] sm:bottom-[10px] sm:left-[10px] flex flex-row gap-[10px] sm:gap-[5px]">
+                  <div className={`size-[15px] sm:size-[8px] border-solid border-[1px] rounded-[100px] border-[#ffffff] z-[100] ${sliderPosition == 0 ? "bg-[#ffffff]" : ""}`}></div>
+                  <div className={`size-[15px] sm:size-[8px] border-solid border-[1px] rounded-[100px] border-[#ffffff] z-[100] ${sliderPosition == 1 ? "bg-[#ffffff]" : ""}`}></div>
+                  <div className={`size-[15px] sm:size-[8px] border-solid border-[1px] rounded-[100px] border-[#ffffff] z-[100] ${sliderPosition == 2 ? "bg-[#ffffff]" : ""}`}></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div onClick={() => setIsPanelOpen(prev => !prev)} className="hidden mb-[12px] relative sm:flex p-[12px] bg-[#6A717D] mt-[12px] rounded-[6px] items-center justify-between">
+              <div className="text-[14px] leading-[18px] font-[700] text-[#ffffff]">
+                {selectedPanel === 0 && 'TokenSale'}
+                {selectedPanel === 1 && 'Overview'}
+                {selectedPanel === 2 && 'Vesting'}
+                {selectedPanel === 3 && 'TokenInfo'}
+                {selectedPanel === 4 && 'RestrictedCountries'}
+              </div>
+              <div><FaChevronDown color="#ffffff" size={22} /></div>
+
+            </div>
+
+            <div className={`${isPanelOpen ? 'sm:flex' : 'sm:hidden'} left-[0px] mb-[40px] text-[14px] leading-[18px] font-[500] sm:flex hidden flex-col mt-[8px] rounded-[8px] text-[#6A717D] border-[1px] border-[#d9d9d9] w-[100%] bg-[#fffffff] p-[12px] gap-[12px]`}>
+              <div className={`${selectedPanel === 0 ? 'font-[700]' : 'font-[500]'}`} onClick={() => { setSelectedPanel(0); setIsPanelOpen(false) }}>TokenSale</div>
+              <div className="w-full h-[1px] bg-[#d9d9d9]"></div>
+              <div className={`${selectedPanel === 1 ? 'font-[700]' : 'font-[500]'}`} onClick={() => { setSelectedPanel(1); setIsPanelOpen(false) }}>Overview</div>
+              <div className="w-full h-[1px] bg-[#d9d9d9]"></div>
+              <div className={`${selectedPanel === 2 ? 'font-[700]' : 'font-[500]'}`} onClick={() => { setSelectedPanel(2); setIsPanelOpen(false) }}>Vesting</div>
+              <div className="w-full h-[1px] bg-[#d9d9d9]"></div>
+              <div className={`${selectedPanel === 3 ? 'font-[700]' : 'font-[500]'}`} onClick={() => { setSelectedPanel(3); setIsPanelOpen(false) }}>TokenInfo</div>
+              <div className="w-full h-[1px] bg-[#d9d9d9]"></div>
+              <div className={`${selectedPanel === 4 ? 'font-[700]' : 'font-[500]'}`} onClick={() => { setSelectedPanel(4); setIsPanelOpen(false) }}>RestrictedCountries</div>
+            </div>
+
             {/* Info Panel Tab */}
-            <div className="flex flex-row gap-[5px] py-[16px] sm:mb-[10px] sm:overflow-scroll justify-start">
+            <div className="sm:hidden flex flex-row gap-[5px] py-[16px] sm:mb-[10px] sm:overflow-scroll justify-start">
 
               {
                 panels.map((panelItem, index) => {
@@ -158,7 +306,7 @@ const Project = () => {
 
 
             {/* Sale Timer */}
-            <div className="flex flex-col px-[24px] py-[24px] w-full border-[#D9D9D9] border-[1px] rounded-[16px] bg-[#ffffff]">
+            <div className="flex sm:hidden flex-col px-[24px] py-[24px] w-full border-[#D9D9D9] border-[1px] rounded-[16px] bg-[#ffffff]">
               <div className="font-[700] text-[#6A717D] text-[14px] leading-[18px]">SALE STARTS IN</div>
 
               <div className="flex flex-row items-center justify-between">
@@ -193,7 +341,7 @@ const Project = () => {
             </div>
 
             {/* fund raising details */}
-            <div className="flex flex-col px-[24px] py-[24px] w-full border-[#D9D9D9] border-[1px] rounded-[20px] bg-[#ffffff]">
+            <div className="flex sm:hidden flex-col px-[24px] py-[24px] w-full border-[#D9D9D9] border-[1px] rounded-[20px] bg-[#ffffff]">
               <div className="text-[14px] leading-[18px] font-[700] text-[#6A717D] pb-[16px]">RAISE DETAILS</div>
               <div className="font-[400] text-[#6A717D] text-[16px] leading-[20px]">Fundraise Goal:</div>
               <div className="flex flex-row justify-between text-[48px] font-[700] pb-[15px]">
@@ -249,10 +397,10 @@ const Project = () => {
 
         {/* Launch Project Section */}
         <div className="flex flex-col justify-center bg-[#FFFfff] relative z-[100] items-center text-[40px] leading-[50px] font-[700] mt-[160px] sm:mt-[160px] w-full mb-[56px] px-[70px] sm:px-[14px] py-[56px] sm:py-[24px] rounded-[32px] sm:rounded-[16px] shadow-[0px_0.08px_2.74px_0px_#99A1B00F,0px_0.2px_6.58px_0px_#99A1B016,0px_0.38px_12.4px_0px_#99A1B01B,0px_0.67px_22.11px_0px_#99A1B020,0px_1.25px_41.36px_0px_#99A1B026,0px_3px_99px_0px_#99A1B036]">
-          <h2 className="text-center w-[85%] sm:w-full sm:text-[22px] sm:leading-[26px]">
+          <h2 className="text-center w-[85%] sm:w-full sm:text-[18px] sm:leading-[24px] sm:font-[700]">
             Are you spearheading a project that's setting the next era of innovation?
           </h2>
-          <p className="text-[#6A717D] text-[16px] sm:text-[14px] sm:leading-[16px] pt-[24px] w-[85%] sm:w-full pb-[40px] leading-[20px] font-[400] text-center">
+          <p className="text-[#6A717D] text-[16px] sm:text-[12px] sm:leading-[18px] pt-[24px] w-[85%] sm:w-full pb-[40px] leading-[20px] font-[400] text-center">
             Contact us today to explore the launch possibilities with BOOST Ignition's collaborative incubation and funding solutions. Join the BOOST community—one of the most expansive and dynamic networks in the industry—and unlock a world of opportunities.
           </p>
           <div className="flex justify-center">
