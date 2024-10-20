@@ -453,7 +453,7 @@ const Home = () => {
       </div>
       <div className="w-full relative z-[500]">
         {/* Navbar  */}
-        <div className="max-w-[100vw] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+        <div className="max-w-[100vw] text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
 
           {/* Navbar Menus */}
           <div className="flex relative z-[000] flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
@@ -520,7 +520,7 @@ const Home = () => {
               <img className="sm:scale-75" src={Boost2} />
             </div>
 
-            <div className="px-[24px] sm:text-[16px] sm:flex sm:flex-col sm:leading-[24px] sm:text-center py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[100%] text-wrap text-[#ffffff] sm:border-0 sm:bg-transparent border-[1px] rounded-[50px] bg-[#ffffff1f] mt-[56px] sm:mt-[24px]">
+            <div className="px-[24px] flex sm:text-[16px] sm:flex !flex-col sm:leading-[24px] sm:text-center py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[100%] text-wrap text-[#ffffff] sm:border-0 sm:bg-transparent border-[1px] rounded-[50px] bg-[#ffffff1f] mt-[56px] sm:mt-[24px]">
               <span className="sm:w-full">Contract Address:</span>
               <span className="sm:w-full sm:text-wrap sm:flex sm:flex-col sm:font-[700]">
                 <span>

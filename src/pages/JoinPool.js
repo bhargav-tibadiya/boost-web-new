@@ -9,6 +9,7 @@ import ShareIcon from '../resources/images/share_icon.png'
 import XIcon from '../resources/images/x_icon.png'
 import logoImage from '../resources/images/logo.png'
 import BuyNow from '../resources/images/buy_now.png'
+import BuyBoostNow from '../resources/images/buy_boost_now.png'
 import Gpay from '../resources/images/gpay.png'
 import ApplePay from '../resources/images/applepay.png'
 import JCB from '../resources/images/jcb.png'
@@ -28,6 +29,9 @@ const JoinPool = () => {
   const [usd, setUsd] = useState(0);
   const [safe, setSafe] = useState(0);
   const [isBuyTokenActive, setIsBuyTokenActive] = useState(false);
+  const [isSaleActive, setIsSaleActive] = useState(false);
+
+
 
   const handleUsdChange = (e) => {
     const usdValue = e.target.value;
@@ -57,44 +61,66 @@ const JoinPool = () => {
           <div className="flex flex-col sm:w-full w-[60%]">
 
             {/* Project Info Section */}
-            <div className="flex flex-row gap-[16px] pb-[32px]">
+            <div className="flex flex-row sm:!flex-col gap-[16px] pb-[32px] sm:pb-[8px]">
 
-              {/* Project Logo */}
-              <div className="h-[100%] flex items-center justify-center sm:items-start sm:justify-start">
-                <img className="w-[100px] h-[100px] sm:size-[50px]" src={RnFLogo} alt="" />
-              </div>
+              <div className="flex flex-row sm:flex-row gap-[16px] sm:gap-[8px]">
 
-              {/* Project Details */}
-              <div>
-                {/* Name and Tags */}
-                <div className="flex flex-row gap-[16px] items-center justify-center">
-                  <div className="flex items-center justify-center text-[40px] sm:text-[30px] sm:leading-[36px] font-[Thunder] leading-[36px] pt-[7px] font-[700]">SAFEFORGE</div>
-                  <div className="flex sm:flex-row sm:text-[12px] flex-row gap-[6px] text-[14px]">
-                    <span className="px-[16px] sm:px-[8px] sm:py-[2px] py-[4px] text-[#FF7A00] bg-[#FFDAAF] rounded-[4px]">Coming Soon</span>
-                    <span className="px-[16px] sm:px-[8px] sm:py-[2px] py-[4px] text-[#FF4DAA] bg-[#FFB9DD] rounded-[4px]">Private Sale</span>
+                {/* Project Logo */}
+                <div className="h-[100%] flex items-center justify-center sm:items-start sm:justify-start">
+                  <img className="w-[100px] h-[100px] min-w-[100px] sm:min-w-[32px] sm:size-[32px]" src={RnFLogo} alt="" />
+                </div>
+
+                {/* Project Details */}
+                <div className="flex w-full flex-col sm:flex-row">
+                  {/* Name and Tags */}
+                  <div className="flex flex-row gap-[16px] items-center justify-center w-full">
+                    <div className=" flex items-center text-[40px] sm:text-[30px] font-[Thunder] leading-[40px] w-full sm:leading-[36px] font-[700]">SAFEFORGE</div>
+                    <div className=" flex flex-row sm:flex-row gap-[6px] justify-between items-center text-[14px] sm:text-[12px] w-full">
+                      <span className="px-[16px] sm:leading-[12px] sm:px-[8px] py-[4px] sm:py-[4px] text-[8px] font-[500] text-[#ffffff] bg-[#26A17B] rounded-[4px]">Trading</span>
+                      <span className="px-[16px] sm:leading-[12px] sm:px-[8px] py-[4px] sm:py-[4px] text-[8px] font-[500] text-[#ffffff] bg-[#1F93FF] rounded-[4px]">Crypto</span>
+                      <span className="px-[16px] sm:leading-[12px] sm:px-[8px] py-[4px] sm:py-[4px] text-[8px] font-[500] text-[#ffffff] bg-[#948DFF] rounded-[4px]">Defi</span>
+                    </div>
                   </div>
-                </div>
 
-                {/* Descitpion */}
-                <div className="pt-[4px] pb-[12px] sm:text-[12px] text-[14px] font-[400]">
-                  The crypto portfolio that continually improves.
-                </div>
+                  {/* Descitpion */}
+                  <div className=" sm:hidden flex pt-[4px] pb-[12px] text-[14px] sm:text-[12px] font-[400]">
+                    The crypto portfolio that continually improves.
+                  </div>
 
-                {/* Socials */}
-                <div className="flex flex-row gap-[10px]">
+
+
+                  {/* Socials */}
+                  <div className="flex sm:hidden flex-row gap-[10px]">
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={WebIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={XIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={FaceBookIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={InstagramIcon} alt="" /></a>
+                    <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={ShareIcon} alt="" /></a>
+                  </div>
+
+                </div>
+              </div>
+              <div className="sm:flex w-full items-center hidden pt-[4px] pb-[12px] text-[14px] sm:text-[12px] font-[400]">
+                <div className="w-[50%] sm:text-[12px] leading-[16px]">The crypto portfolio that continually improves.</div>
+                <div className="sm:flex w-[50%] hidden flex-row items-end justify-end gap-[10px]">
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={WebIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={XIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={FaceBookIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={InstagramIcon} alt="" /></a>
                   <a className="pointer" href=""><img className="size-[20px] sm:size-[16px]" src={ShareIcon} alt="" /></a>
                 </div>
-
               </div>
 
             </div>
 
+            {/* Sale Timer Section */}
+            <div className={`${isSaleActive ? 'sm:flex' : 'sm:hidden'} hidden flex-row sm:w-full items-center justify-between px-[20px] py-[20px] border-[1px] border-[#d9d9d9] rounded-[20px]`}>
+              <span className="text-[10px] sm:w-[full] leading-[12px] font-[700] text-[#6A717D]">SALE ENDS IN</span>
+              <span className="text-[18px] sm:w-[full] leading-[24px] font-[700] text-[#222222]">00 : 24H : 53M : 61S</span>
+            </div>
+
             {/* Join Pool Insruction Section */}
-            <div className="flex flex-row sm:!flex-col gap-[25px] p-[24px] border-[1px] border-[#d9d9d9] rounded-[18px]">
+            <div className={`${isSaleActive ? 'sm:hidden' : 'sm:flex'} flex !flex-row sm:!flex-col gap-[25px] p-[24px] border-[1px] border-[#d9d9d9] rounded-[18px]`}>
 
               <div className="flex flex-col w-full">
                 <div className="text-[24px] sm:text-[20px] leading-[30px] sm:leading-[24px] font-[700] pb-[12px] sm:pb-[18px]">Don't forget to join the pool 24hrs in advance!</div>
@@ -134,40 +160,40 @@ const JoinPool = () => {
 
               <div className="h-[1px] w-full bg-[#D9D9D9] my-[24px] sm:my-[16px]"></div>
 
-              <div className="flex flex-row gap-[64px] mb-[24px]">
+              <div className="flex flex-row sm:!flex-col gap-[64px] sm:gap-[12px] mb-[24px] sm:mb-[12px]">
                 <div className="flex flex-col gap-[12px]">
                   <span className="text-[14px] leading-[18px] font-[700] text-[#6A717D] px-[8px]">TOTAL POOL</span>
                   <span className="text-[64px] sm:text-[32px] leading-[64px] sm:leading-[32px] font-[700] font-[Thunder] px-[8px]">$1,000,000</span>
                 </div>
                 <div className="flex flex-col gap-[12px]">
                   <span className="text-[14px] leading-[18px] font-[700] text-[#6A717D] px-[8px]">TOTAL PURCHASED</span>
-                  <span className="text-[64px] sm:text-[32px] leading-[64px] sm:leading-[32px] font-[700] font-[Thunder] px-[8px]">N/A</span>
+                  <span className="text-[64px] sm:text-[32px] leading-[64px] sm:leading-[32px] font-[700] font-[Thunder] px-[8px]">{isSaleActive ? '$367, 521' : 'N/A'}</span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-[8px]">
                 <div className="text-[16px] leading-[20px] font-[400] text-[#6A717D] px-[8px]">Timeline: </div>
                 <div className="flex flex-col sm:flex-row sm:gap-[15px]">
-                  <div className="flex flex-row sm:!flex-col items-center justify-between w-full sm:w-[20px] h-[20px] sm:h-[325px] bg-[#F2F2F2] rounded-[500px] border-[#d9d9d9] border-[1px] box-border px-[4px] sm:px-0 sm:py-[4px]">
+                  <div className="flex flex-row sm:!flex-col items-center justify-between w-full sm:w-[20px] h-[20px] sm:h-[125px] bg-[#F2F2F2] rounded-[500px] border-[#d9d9d9] border-[1px] box-border px-[4px] sm:px-0 sm:py-[4px]">
                     <div className="bg-gradient-to-br from-[#ACFFB7] via-[#0BCAFF] to-[#1F93FF] size-[12px] opacity-40 rounded-[500px]"></div>
                     <div className="bg-gradient-to-br from-[#ACFFB7] via-[#0BCAFF] to-[#1F93FF] size-[12px] opacity-40 rounded-[500px]"></div>
                     <div className="bg-gradient-to-br from-[#ACFFB7] via-[#0BCAFF] to-[#1F93FF] size-[12px] opacity-40 rounded-[500px]"></div>
                     <div className="bg-gradient-to-br from-[#ACFFB7] via-[#0BCAFF] to-[#1F93FF] size-[12px] opacity-40 rounded-[500px]"></div>
                   </div>
                   <div className="hello flex flex-row sm:!flex-col sm:justify-between sm:items-start items-center justify-between w-full px-[8px] mt-[6px]">
-                    <div className="flex flex-col min-w-[125px]">
+                    <div className="flex flex-col sm:flex-row sm:gap-[6px] min-w-[125px]">
                       <span className="text-[12px] leading-[16px] text-left sm:!text-left font-[700] text-[#6A717D]">Early Pool Starts</span>
                       <span className="text-[12px] leading-[16px] text-left sm:!text-left font-[400] text-[#6A717D]">2024-05-20 9AM</span>
                     </div>
-                    <div className="flex flex-col min-w-[125px]">
+                    <div className="flex flex-col sm:flex-row sm:gap-[6px] min-w-[125px]">
                       <span className="text-[12px] leading-[16px] text-center sm:!text-left font-[700] text-[#6A717D]">Early Pool Ends</span>
                       <span className="text-[12px] leading-[16px] text-center sm:!text-left font-[400] text-[#6A717D]">2024-05-21 8AM</span>
                     </div>
-                    <div className="flex flex-col min-w-[125px]">
+                    <div className="flex flex-col sm:flex-row sm:gap-[6px] min-w-[125px]">
                       <span className="text-[12px] leading-[16px] text-center sm:!text-left font-[700] text-[#6A717D]">Airdrop Tokens</span>
                       <span className="text-[12px] leading-[16px] text-center sm:!text-left font-[400] text-[#6A717D]">TBA</span>
                     </div>
-                    <div className="flex flex-col min-w-[125px]">
+                    <div className="flex flex-col sm:flex-row sm:gap-[6px] min-w-[125px]">
                       <span className="text-[12px] leading-[16px] text-right sm:!text-left font-[700] text-[#6A717D]">Listing Time</span>
                       <span className="text-[12px] leading-[16px] text-right sm:!text-left font-[400] text-[#6A717D]">TBA</span>
                     </div>
@@ -177,8 +203,59 @@ const JoinPool = () => {
 
             </div>
 
+            <div className={`${isSaleActive ? 'opacity-100' : 'opacity-40'} sm:flex hidden px-[20px] py-[20px] sm:p-[10px] max-w-[550px] bg-custom-radial bg-custom-linear rounded-[64px] sm:rounded-[40px] mt-[70px] sm:mt-[25px] bg-blend-overlay relative border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]`}>
+              <div className="flex flex-col items-center justify-center py-[48px] px-[32px] sm:py-[15px] sm:px-[15px] rounded-[48px] sm:rounded-[32px] bg-[#ffffff] sm:max-w-[100%]">
+
+                <img className="" src={BuyNow} alt="" />
+
+                <span className="text-[14px] leading-[20px] font-[500] text-[#6A717D] pt-[5px] pb-[8px]">Choose your currency</span>
+
+                <div onClick={() => setSelectedMethod("BNB")} className={`flex flex-row ${selectedMethod == "BNB" ? "opacity-[100%]" : "opacity-[32%]"} items-center justify-center px-[12px] py-[6px] mb-[14px] bg-[#EEA61B] w-[50%] sm:w-[75%] rounded-[100px] cursor-pointer border-solid border-2 border-[#DB950E] rounded-[100px] shadow-[#DB950E] shadow-[6px_5px_0_0] `}>
+                  <div className="min-h-[28px] min-w-[28px]"><BNBLogo /></div>
+                  <div className="text-[16px] text-center leading-[20px] font-[700] text-[#ffffff] w-[100%]">BNB</div>
+                </div>
+                <div onClick={() => setSelectedMethod("USDT")} className={`flex flex-row ${selectedMethod == "USDT" ? "opacity-[100%]" : "opacity-[32%]"} items-center justify-center px-[12px] py-[6px] mb-[14px] bg-[#30B68C] w-[50%] sm:w-[75%] rounded-[100px] cursor-pointer border-solid border-2 border-[#26A17B] rounded-[100px] shadow-[#26A17B] shadow-[6px_5px_0_0] `}>
+                  <div className="min-h-[28px] min-w-[28px] relative after:absolute after:w-[12px] after:h-[12px] after:top-[0px] after:right-[-5px] z-10 after:bg-[url('./resources/images/ether.svg')]"><USDTLogo /></div>
+                  <div className="text-[16px] text-center leading-[20px] font-[700] text-[#ffffff] w-[100%]">USDT(ERC20)</div>
+                </div>
+                <div onClick={() => setSelectedMethod("$")} className={`flex flex-row ${selectedMethod == "$" ? "opacity-[100%]" : "opacity-[32%]"} items-center justify-center px-[12px] py-[6px] mb-[14px] bg-[#4C69DA] w-[50%] sm:w-[75%] rounded-[100px] cursor-pointer border-solid border-2 border-[#3658DA] rounded-[100px] shadow-[#3658DA] shadow-[6px_5px_0_0] `}>
+                  <div className="min-h-[28px] min-w-[28px]"><CARDLogo /></div>
+                  <div className="text-[16px] text-center leading-[20px] font-[700] text-[#ffffff] w-[100%]">CARD</div>
+                </div>
+
+                <span className="text-[16px] leading-[24px] font-[700] py-[8px] mt-[12px]">1 $SAFE= $0.05 USD</span>
+
+                <div className="flex flex-col items-center gap-4 p-4">
+                  <div className="flex flex-col items-center w-full">
+                    <label className="text-lg font-semibold mb-1">USD you pay</label>
+                    <input
+                      type="number"
+                      value={usd}
+                      onChange={handleUsdChange}
+                      className="w-64 p-2 rounded-md bg-gray-100 text-center text-xl"
+                    />
+                  </div>
+                  <div className="flex flex-col items-center w-full">
+                    <label className="text-lg font-semibold mb-1">$SAFE you receive</label>
+                    <input
+                      type="number"
+                      value={safe}
+                      onChange={handleSafeChange}
+                      className="w-64 p-2 rounded-md bg-gray-100 text-center text-xl"
+                    />
+                  </div>
+                </div>
+
+                <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] min-w-[175px] w-[100%] text-center h-fit mt-[25px] cursor-pointer leading-[20px] font-[700] px-[40px] py-[10px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
+                  BUY $SAFE TOKEN
+                </div>
+
+              </div>
+            </div>
+
             {/* Project Details Section */}
             <div className="flex flex-col px-[24px] py-[32px] border-[1px] mt-[24px] mb-[125px] sm:mb-[25px] border-[#d9d9d9] rounded-[20px]">
+
 
               <div className="flex flex-col gap-[16px]">
 
@@ -225,14 +302,14 @@ const JoinPool = () => {
           <div className="flex flex-col w-[35%] sm:w-full">
 
             {/* Sale Timer Section */}
-            <div className="flex flex-row sm:!flex-col sm:w-full items-center justify-between px-[20px] py-[20px] border-[1px] border-[#d9d9d9] rounded-[20px]">
+            <div className={`${isSaleActive ? 'sm:hidden' : 'sm:hidden'} flex flex-row sm:!flex-col sm:w-full items-center justify-between px-[20px] py-[20px] border-[1px] border-[#d9d9d9] rounded-[20px]`}>
               <span className="text-[14px] sm:w-[full] leading-[18px] font-[700] text-[#6A717D]">SALE ENDS IN</span>
               <span className="text-[24px] sm:w-[full] leading-[70px] font-[700] text-[#222222]">00 : 24H : 53M : 61S</span>
             </div>
 
             {/* Buy Token Section */}
-            <div className="px-[20px] py-[20px] sm:p-[10px] max-w-[550px] bg-custom-radial bg-custom-linear rounded-[64px] mt-[70px] sm:mt-[25px] bg-blend-overlay relative p-4 border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
-              <div className="flex flex-col items-center justify-center py-[48px] px-[32px] sm:py-[24px] sm:px-[16px] rounded-[48px] bg-[#ffffff]">
+            <div className="sm:hidden flex px-[20px] py-[20px] sm:p-[10px] max-w-[550px] bg-custom-radial bg-custom-linear rounded-[64px] mt-[70px] sm:mt-[25px] bg-blend-overlay relative p-4 border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
+              <div className="flex w-full flex-col items-center justify-center py-[48px] px-[32px] sm:py-[24px] sm:px-[16px] rounded-[48px] bg-[#ffffff]">
 
                 <img className="" src={BuyNow} alt="" />
 
@@ -310,10 +387,10 @@ const JoinPool = () => {
         </div>
 
         {/* Buy Token Section */}
-        <div onClick={(e) => { e.stopPropagation() }} className="px-[20px] py-[20px] sm:p-[10px] bg-custom-radial bg-custom-linear rounded-[64px] min-w-[550px] sm:min-w-[300px] sm:max-w-[350px] bg-blend-overlay relative p-4 border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
-          <div className="flex flex-col items-center justify-center py-[48px] px-[32px] sm:py-[24px] sm:px-[16px] rounded-[48px] bg-[#ffffff]">
+        <div onClick={(e) => { e.stopPropagation() }} className="px-[20px] py-[20px] sm:p-[10px] bg-custom-radial bg-custom-linear rounded-[64px] sm:rounded-[40px] min-w-[550px] sm:min-w-[300px] sm:max-w-[350px] bg-blend-overlay relative sm:p-[15px] border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
+          <div className="flex flex-col items-center justify-center py-[48px] px-[32px] sm:py-[24px] sm:px-[16px] rounded-[48px] sm:rounded-[32px] bg-[#ffffff]">
 
-            <img className="sm:w-[100px] sm:h-[37px]" src={BuyNow} alt="" />
+            <img className="sm:w-[223px] sm:h-[48px]" src={BuyBoostNow} alt="" />
 
             <span className="text-[14px] leading-[20px] font-[500] text-[#6A717D] pt-[5px] pb-[8px]">Choose your currency</span>
 
@@ -330,7 +407,7 @@ const JoinPool = () => {
               <div className="text-[14px] text-center leading-[20px] font-[700] text-[#ffffff] w-[100%]">CARD</div>
             </div>
 
-            <span className="text-[16px] sm:text-[14px] leading-[24px] sm:leading-[16px] font-[700] py-[8px] sm:py-[4px] mt-[12px] sm:mt-[6px]">1 $SAFE= $0.05 USD</span>
+            <span className="text-[16px] sm:text-[14px] leading-[24px] sm:leading-[16px] font-[700] py-[8px] sm:py-[4px] mt-[12px] sm:mt-[20px]">1 BOOST = $0.005 USD</span>
 
             <div className="flex flex-row sm:!flex-col items-center gap-4 p-4">
               <div className="flex flex-col items-center w-[200px]">
@@ -360,7 +437,7 @@ const JoinPool = () => {
               </div>
             </div>
 
-            <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] min-w-[175px] w-[75%] text-center h-fit mt-[25px] cursor-pointer leading-[20px] font-[700] px-[40px] sm:px-[10px] py-[12px] sm:py-[6px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
+            <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] min-w-[175px] w-[75%] sm:w-full text-center h-fit mt-[25px] cursor-pointer leading-[20px] font-[700] px-[40px] sm:px-[10px] py-[12px] sm:py-[6px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
               APPROVE PURCHASE
             </div>
 

@@ -46,7 +46,7 @@ const Stake = () => {
 
       <div className="w-full relative z-[500]">
         {/* Navbar  */}
-        <div className="max-w-[100vw] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+        <div className="max-w-[100vw] text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
 
           {/* Navbar Menus */}
           <div className="flex relative z-[000] flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
@@ -105,8 +105,8 @@ const Stake = () => {
           <img src={Boost_8} className="sm:flex hidden scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
         </div>
 
-        <div className="flex items-center justify-center px-[20px] py-[20px] sm:p-[10px] max-w-[550px] min-w-[420px] sm:max-w-[350px] sm:min-w-[300px] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative p-4 border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
-          <div className="flex flex-col w-full items-center justify-center py-[48px] px-[32px] sm:py-[15px] sm:px-[16px] rounded-[48px] bg-[#ffffff]">
+        <div className="flex items-center justify-center px-[20px] py-[20px] max-w-[550px] min-w-[420px] sm:max-w-[350px] sm:min-w-[300px] bg-custom-radial bg-custom-linear rounded-[64px] sm:rounded-[40px] bg-blend-overlay relative p-4 sm:!p-[15px] border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
+          <div className="flex flex-col w-full items-center justify-center py-[48px] px-[32px] sm:py-[15px] sm:px-[16px] sm:rounded-[32px] rounded-[64px] bg-[#ffffff]">
 
             <img className="" src={StartStacking} alt="" />
 

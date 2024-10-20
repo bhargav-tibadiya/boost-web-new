@@ -4,6 +4,8 @@ import { useRoutes } from "react-router-dom";
 import Loader from "./components/Loader";
 import Project from "./pages/Project";
 import JoinPool from "./pages/JoinPool";
+import Disclaimer from "./pages/Disclaimer";
+import Launchpad from "./pages/Launchpad";
 
 const Home = lazy(() => retry(() => import("./pages/Home")));
 const BoostBuy = lazy(() => retry(() => import("./pages/BoostBuy")));
@@ -26,6 +28,10 @@ const Routes = () => {
       element: <Stake />,
     },
     {
+      path: "/launchpad/",
+      element: <Launchpad />,
+    },
+    {
       path: "/launchpad/project/:id",
       element: <Project />,
     },
@@ -33,10 +39,10 @@ const Routes = () => {
       path: "/launchpad/project/:id/joinpool",
       element: <JoinPool />,
     },
-    // {
-    //   path: "/boost-stake",
-    //   element: <BoostStake />,
-    // },
+    {
+      path: "/disclaimer",
+      element: <Disclaimer />,
+    },
     {
       path: "/loader",
       element: <Loader />,
