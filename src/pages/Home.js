@@ -1,7 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import homeBg from "../resources/images/home_page_bg.png";
-import lightsbg from "../resources/images/lights.png";
-import homeBgMobile from "../resources/images/home_texture_bg.png";
 
 import Slider1 from "../resources/images/polygon_slider.png";
 import Slider2 from "../resources/images/rush_slider.png";
@@ -15,15 +12,12 @@ import paulSajulla from "../resources/images/Paul_Sajulla.png";
 import tomPutter from "../resources/images/Tom_Putter.png";
 import rohanTyagi from "../resources/images/Rohan_Tyagi.png";
 import chrisopherJones from "../resources/images/Chrisopher_jones.png";
-import footerBg from "../resources/images/Footer_Bg.png";
 import "../styles/Home.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Navbar from "../components/Navbar";
 
 import BoostBig from "../resources/images/boost_big.png";
-import BuyBoostNow from "../resources/images/buy_boost_now.png";
 import BoostLaunchpad from "../resources/images/boost_launchpad.png";
 import SafeForgeBGLive from "../resources/images/safeforge_bg.png";
 import HyperionBG from "../resources/images/hyperion_bg.png";
@@ -50,8 +44,6 @@ import Boost_5 from '../resources/images/boost_5.png'
 import Boost_6 from '../resources/images/boost_6.png'
 import Boost_7 from '../resources/images/boost_7.png'
 import boost_big2 from '../resources/images/boost_big2.png'
-import nav_bg from '../resources/images/nav_bg.png'
-
 import XIconW from '../resources/images/x-white.png'
 import TelegramIconW from '../resources/images/tele-white.png'
 
@@ -445,12 +437,19 @@ const Home = () => {
 
   return (
     <div className="overfolow-hidden box-border bg-[#002452] px-[120px] sm:px-[20px] sm:max-w-[100vw] relative z-100">
-      <div className="sm:hidden texture_bg absolute z-[0] overflow-visible top-0 left-0">
+      {/* <div className="sm:hidden texture_bg absolute z-[0] overflow-visible top-0 left-0">
         <img src={homeBg} alt="homeBg" />
+      </div> */}
+      <div className="absolute w-[full] flex overflow-visible m-auto translate-y-[-50%] top-0 z-[0]">
+        <div className="w-[1680px] h-[1500px] border-[1px] blur-[350px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#005ACF_24.58%,_#002452_83.03%)]">
+        </div>
       </div>
+
       <div className="hidden sm:flex texture_bg absolute z-[0] overflow-visible top-0 left-0">
-        <img src={lightsbg} alt="homeBg" />
+        <div className="w-[750px] h-[700px] border-[1px] border-[#ff0000] blur-[350px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#005ACF_24.58%,_#002452_83.03%)]">
+        </div>
       </div>
+
       <div className="w-full relative z-[500]">
         {/* Navbar  */}
         <div className="max-w-[100vw] text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
@@ -498,8 +497,9 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="absolute z-[-100]">
-            <img className="h-[850px]" src={nav_bg} alt="" />
+          <div className="absolute z-[0]">
+            <div className="w-[600px] h-[1000px] border-[1px] blur-[350px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#005ACF_24.58%,_#002452_83.03%)]">
+            </div>
           </div>
         </div>
 
@@ -520,15 +520,14 @@ const Home = () => {
               <img className="sm:scale-75" src={Boost2} />
             </div>
 
-            <div className="px-[24px] flex sm:text-[16px] sm:flex !flex-col sm:leading-[24px] sm:text-center py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[100%] text-wrap text-[#ffffff] sm:border-0 sm:bg-transparent border-[1px] rounded-[50px] bg-[#ffffff1f] mt-[56px] sm:mt-[24px]">
+            <div className=" hidden sm:flex text-[32px] hidden sm:flex leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
+              <img className="w-full" src={Boost_2} />
+            </div>
+
+            <div className="sm:hidden flex px-[24px] sm:text-[16px] !flex-col sm:bg-[#ffffff] sm:w-full sm:leading-[24px] sm:text-center py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[100%] text-wrap text-[#000000] sm:border-0 sm:bg-transparent border-[1px] rounded-[50px] bg-[#ffffff] mt-[56px] sm:mt-[24px]">
               <span className="sm:w-full">Contract Address:</span>
-              <span className="sm:w-full sm:text-wrap sm:flex sm:flex-col sm:font-[700]">
-                <span>
-                  0x0000000000000000000
-                </span>
-                <span>
-                  000000000000000000000
-                </span>
+              <span className="sm:w-full sm:text-wrap sm:flex sm:flex-col min-w-[240px] sm:min-w-0 font-[700]">
+                TBA
               </span>
             </div>
           </div>
@@ -539,7 +538,9 @@ const Home = () => {
             <div className="px-[20px] py-[20px] sm:px-[10px] sm:py-[10px] max-w-[550px] sm:max-w-[350px] min-w-[420px] sm:min-w-[300px] bg-custom-radial bg-custom-linear rounded-[64px] sm:rounded-[32px] bg-blend-overlay relative border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
               <div className="flex flex-col items-center justify-center py-[48px] px-[32px] sm:py-[24px] sm:px-[16px] rounded-[48px] sm:rounded-[22px] bg-[#ffffff]">
 
-                <img src={BuyBoostNow} className="scale-110 sm:scale-75" alt="" />
+                <div className="text-[56px] leading-[68px] sm:text-[40px] sm:leading-[48px] font-[Thunder] font-[800]">
+                  BUY $BOOST NOW
+                </div>
 
                 {/* time */}
                 <div className="flex flex-row gap-[4px] w-full mt-[16px] items-center justify-center">
@@ -615,8 +616,16 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="text-[32px] hidden sm:flex leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
+          {/*  */}
+          <div className="sm:hidden text-[32px] hidden sm:flex leading-[40px] sm:text-[20px] sm:text-center sm:leading-[22px] font-[700] text-[#ffffff] mt-[32px] sm:mt-[6px]">
             <img className="w-full" src={Boost_2} />
+          </div>
+
+          <div className="hidden sm:flex px-[24px] sm:text-[16px] !flex-col sm:w-full sm:leading-[24px] sm:text-center py-[16px] sm:px-[12px] sm:py-[8px] sm:max-w-[100%] text-wrap text-[#ffffff] sm:border-0 sm:bg-transparent border-[1px] rounded-[50px] bg-[#ffffff] mt-[56px] sm:mt-[24px]">
+            <span className="sm:w-full">Contract Address:</span>
+            <span className="sm:w-full sm:text-wrap sm:flex sm:flex-col min-w-[240px] sm:min-w-0 font-[700]">
+              TBA
+            </span>
           </div>
 
         </div>
@@ -635,8 +644,8 @@ const Home = () => {
 
         <div className="mt-[154px] sm:mt-[48px] mb-[200px] sm:mb-[48px] flex items-center justify-center w-full ">
 
-          <div className="px-[20px] max-w-[800px] p-[16px] sm:p-[10px] min-w-[420px] sm:min-w-[325px] sm:max-w-[95%] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative border-[2.73px] border-[#ffffff49] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1] bg-[radial-gradient(155.61%_569.43%_at_-6.84%_100%,_rgba(172,255,183,0.2)_0%,_rgba(11,202,255,0.2)_75.45%,_rgba(31,147,255,0.2)_100%)]">
-            <div className="flex flex-col items-center justify-center py-[56px] px-[56px] sm:py-[24px] sm:px-[16px] rounded-[48px] border-[2.73px] border-[#ffffff49] border-solid text-[#ffffff] bg-[radial-gradient(155.61%_569.43%_at_-6.84%_100%,_rgba(172,255,183,0.2)_0%,_rgba(11,202,255,0.2)_75.45%,_rgba(31,147,255,0.2)_100%)]">
+          <div className="px-[20px] max-w-[950px] p-[16px]  sm:p-[10px] min-w-[420px] sm:min-w-[325px] sm:max-w-[95%] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative border-[2.73px] border-[#ffffff49] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1] bg-[linear-gradient(180deg,_rgba(255,255,255,0.8)_0%,_rgba(143,143,143,0.8)_58%,_rgba(255,255,255,0.8)_100%)]">
+            <div className="flex flex-col text-[20px] leading-[30px] sm:text-[16px] sm:leading-[24px] text-justify font-[400] items-center text-[#002452] justify-center py-[56px] bg-[#ffffff] px-[56px] sm:py-[24px] sm:px-[16px] rounded-[48px] border-[2.73px] border-[#ffffff49] border-solid bg-[radial-gradient(155.61%_569.43%_at_-6.84%_100%,_rgba(172,255,183,0.2)_0%,_rgba(11,202,255,0.2)_75.45%,_rgba(31,147,255,0.2)_100%)]">
               BOOST makes Web3 project launches accessible to everyone through its innovative launchpad. Whether you are staking the BOOST token for early access or jumping into an open pool without any commitments, the platform ensures no outrageous entry fees or gatekeeping. If you want to participate in the next big thing in Web3, BOOST ensures you can, regardless of your wallet size.
               <br />
               <br />
@@ -779,7 +788,7 @@ const Home = () => {
 
 
 
-        <div className="absolute sm:hidden w-[100vw] scale-150 sm:scale-100 h-[1200px] bg-[url('./resources/images/social_bg.png')] bg-center bg-no-repeat bg-cover top-[450px] sm:top-[25px] z-[-1]">
+        <div className="absolute sm:hidden w-[1000px] scale-150 blur-[240px] sm:scale-100 h-[600px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#26D7F3_0%,_rgba(38,_215,_243,_0)_83.03%)] bg-center bg-no-repeat bg-cover top-[600px] sm:top-[25px] z-[-1]">
         </div>
 
       </div>
@@ -794,17 +803,24 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-center">
-        <div className="flex items-center justify-center flex-col w-[1000px] sm:w-[350px] px-[154px] py-[96px] sm:p-[40px] mt-[200px] rounded-[64px] sm:rounded-[24px] gap-[40px] sm:gap-[20px] bg-center bg-[url('./resources/images/claim_bg.png')] border-[1px] border-[#ffffff1f]">
-          <div className="text-[56px] leading-[60px] sm:text-[40px] sm:leading-[44px] sm:text-center font-[Thunder] font-[600] text-[#ffffff]">How to Claim your Tokens</div>
-          <div className="text-[20px] leading-[30px] sm:text-[16px] sm:leading-[24px] font-[400] text-[#ffffff] text-center">Tokens will be available to claim on 00/00/0000 by clicking the “Claim Tokens” button below. You will not be able to claim your token until the specified date above <br /> Note: After purchase, you can connect your wallet and see your balance allocation in the Buy box under "Balance".</div>
-          <div className="flex items-center justify-center px-[32px] sm:px-[16px] py-[16px] sm:py-[8px] text-[24px] leading-[28px] sm:text-[18px] sm:leading-[20px] font-[700] w-[250px] bg-[#BABABA] border-solid border-2 border-[#818181] rounded-[100px] shadow-[#818181] shadow-[10px_8px_0_0] sm:shadow-[5px_4px_0_0]">CLAIM TOKEN</div>
+      <div className="w-full flex items-center justify-center bg-[linear-gradient(180deg,_rgba(255,255,255,0.8)_0%,_rgba(143,143,143,0.8)_58%,_rgba(255,255,255,0.8)_100%)]">
+
+      </div>
+
+      <div className="mt-[154px] sm:mt-[48px] mb-[200px] sm:mb-[48px] flex items-center justify-center w-full ">
+
+        <div className="px-[20px] max-w-[950px] p-[16px] sm:rounded-[40px]  sm:p-[10px] min-w-[420px] sm:min-w-[325px] sm:max-w-[95%] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative border-[2.73px] border-[#ffffff49] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1] bg-[linear-gradient(180deg,_rgba(255,255,255,0.8)_0%,_rgba(143,143,143,0.8)_58%,_rgba(255,255,255,0.8)_100%)]">
+          <div className="flex text-[20px] leading-[30px] font-[400] text-[#002452] items-center justify-center flex-col sm:w-[100%] px-[154px] py-[96px] sm:p-[40px] rounded-[64px] sm:rounded-[24px] gap-[40px] sm:gap-[20px] bg-center bg-[#ffffff] border-[1px] border-[#ffffff1f]">
+            <div className="text-[56px] leading-[60px] sm:text-[40px] sm:leading-[44px] sm:text-center font-[Thunder] font-[600] text-[#002452  ]">How to Claim your Tokens</div>
+            <div className="text-[20px] leading-[30px] sm:text-[16px] sm:leading-[24px] font-[400] text-[#002452] text-center">Tokens will be available to claim on 00/00/0000 by clicking the “Claim Tokens” button below. You will not be able to claim your token until the specified date above <br /> Note: After purchase, you can connect your wallet and see your balance allocation in the Buy box under "Balance".</div>
+            <div className="flex items-center justify-center px-[32px] sm:px-[16px] py-[16px] sm:py-[8px] text-[24px] leading-[28px] sm:text-[18px] sm:leading-[20px] font-[700] w-[250px] bg-[#BABABA] border-solid border-2 border-[#818181] rounded-[100px] shadow-[#818181] shadow-[10px_8px_0_0] sm:shadow-[5px_4px_0_0]">CLAIM TOKEN</div>
+          </div>
         </div>
       </div>
 
       {/* Team */}
       <div className="flex flex-wrap items-center justify-between mt-[200px] sm:mt-[100px] px-[115px] sm:px-[0px] w-full">
-        <div className="text-[56px] leading-[60px] font-[Thunder] font-[600] text-[#ffffff] w-full text-center sm:py-[15px]">MEET THE TEAM</div>
+        <div className="text-[56px] leading-[60px] font-[Thunder] font-[600] text-[#ffffff] w-full text-center sm:py-[15px]">Meet the Team</div>
         <div className="flex flex-wrap items-start justify-center mt-[48px] gap-[72px] sm:gap-[40px]">
 
           {
@@ -870,10 +886,10 @@ const Home = () => {
           <div key={index} className="w-full flex flex-col relative z-10">
             {activeAccordion === index ? (
               <>
-                <div className="bg-[#ffffff] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#000000] w-full rounded-[12px]">
-                  <div className={`absolute !max-h-[78px] z-[-1] sm:h-[48px] bg-[#002452] border-[2px] px-[32px] ${(index == 1 || index == 2 || index == 5) ? 'sm:py-[56px] py-[42px]' : 'sm:py-[42px] py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
+                <div className="bg-[#ffffff] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#002452] w-full rounded-[12px]">
+                  <div className={`absolute !max-h-[78px] z-[-1] sm:h-[48px] bg-[#00306E] border-[2px]  px-[32px] ${(index == 1 || index == 2 || index == 4 || index == 5) ? 'sm:py-[56px] py-[42px]' : 'sm:py-[42px] py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
                   <div className="flex flex-row justify-between items-center relative z-[100]">
-                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#002452] font-[500]">{que.que}</span>
+                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#002452] font-[500] uppercase">{que.que}</span>
                     <span
                       onClick={() => handleToggleCollapse(index)}
                       className="text-[32px] font-[Thunder] leading-[34px] text-[#002452] font-[500] cursor-pointer"
@@ -888,10 +904,10 @@ const Home = () => {
               </>
             ) : (
               <>
-                <div className="bg-[#0C59BF] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#ffffff] w-full rounded-[12px]">
-                  <div className={`absolute !max-h-[78px] z-[-1] sm:h-[48px] bg-[#002452] border-[2px] px-[32px] ${(index == 1 || index == 2 || index == 5) ? 'sm:py-[56px] py-[42px]' : 'sm:py-[42px] py-[42px]'} border-[#ffffff] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
+                <div className="bg-[#004195] border-[2px] px-[32px] py-[20px] sm:px-[8px] sm:py-[5px] border-[#002452] w-full rounded-[12px]">
+                  <div className={`absolute !max-h-[78px] z-[-1] sm:h-[48px] bg-[#00306E] border-[2px]  px-[32px] ${(index == 1 || index == 2 || index == 4 || index == 5) ? 'sm:py-[56px] py-[42px]' : 'sm:py-[42px] py-[42px]'} border-[#002452] w-full rounded-[12px] top-[10px] left-[10px]`}></div>
                   <div className="flex flex-row justify-between items-center relative z-[100]">
-                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#ffffff] font-[500]">{que.que}</span>
+                    <span className="text-[32px] font-[Thunder] leading-[34px] sm:text-[24px] sm:leading-[26px] sm:max-w-[80%] sm:px-[20px] sm:py-[25px] text-[#ffffff] font-[500] uppercase">{que.que}</span>
                     <span
                       onClick={() => handleToggleCollapse(index)}
                       className="text-[32px] font-[Thunder] leading-[34px] text-[#ffffff] font-[500] cursor-pointer"
@@ -906,9 +922,9 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="sm:flex flex-col items-center justify-center py-[40px] hidden">
+      <div className="flex flex-col relative z-10 items-center justify-center py-[40px]">
 
-        <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] sm:text-[14px] min-w-[175px] w-[75%] sm:w-fit sm:mt-[8px] text-center h-fit cursor-pointer leading-[20px] font-[700] px-[40px] py-[12px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
+        <div onClick={() => setIsBuyTokenActive(true)} className="text-[16px] sm:text-[14px] min-w-[175px] w-[75%] max-w-[250px] mt-[120px] sm:w-fit sm:mt-[8px] text-center h-fit cursor-pointer leading-[20px] font-[700] px-[40px] py-[12px] bg-[#FED73C] border-solid border-2 border-[#222222] rounded-[100px] shadow-[#222222] shadow-[6px_5px_0_0] sm:shadow-[3px_2px_0_0]">
           {
             walletConnected ?
               "BUY $BOOST TOKEN" : "CONNECT WALLET"
@@ -918,7 +934,7 @@ const Home = () => {
 
       {/* <Footer /> */}
 
-      <div className="py-[56px] text-[#ffffff] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
+      <div className="py-[56px] m-auto max-w-[1200px] text-[#ffffff] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
 
         <div className="flex flex-row sm:!flex-col sm:items-center w-full relative z-[10] top-0">
 
@@ -926,9 +942,9 @@ const Home = () => {
             <LogoFull />
             <a href="#" className="hover:underline py-[12px] ext-[16px] leading-[20px] sm:pt-[48px] font-[700] text-[#ffffff]">Read Whitepaper</a>
             <div className="flex sm:flex-col text-center text-[16px] leading-[20px] font-[400] gap-[24px] sm:gap-[16px]">
-              <a href="#" className="hover:underline">Privacy Policy</a>
-              <a href="#" className="hover:underline">Cookie Policy</a>
-              <a href="#" className="hover:underline">Disclaimer</a>
+              <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
+              <a href="/cookies" className="hover:underline">Cookie Policy</a>
+              <a href="/disclaimer" className="hover:underline">Disclaimer</a>
             </div>
 
             <div className="pt-[48px] pb-[24px] hidden sm:flex w-full items-center justify-center">
@@ -980,8 +996,9 @@ const Home = () => {
 
       </div>
 
-      <div className="absolute w-[2000px]  sm:w-[1500px] overflow-visible sm:translate-x-[-50%] left-0 bottom-0 z-[0]">
-        <img src={footerBg} alt="" />
+      <div className="absolute w-[full] flex overflow-visible m-auto translate-y-[50%] bottom-0 z-[0]">
+        <div className="w-[1680px] h-[1500px] border-[1px] border-[#ff0000] blur-[350px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#26D7F3_0%,_rgba(38,_215,_243,_0)_83.03%)]">
+        </div>
       </div>
     </div >
   );

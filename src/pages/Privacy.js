@@ -11,7 +11,7 @@ import { LogoFull } from "../resources/svg/Global"
 import boost_big2 from '../resources/images/boost_big2.png'
 import logoImage from '../resources/images/logo.png'
 
-const Disclaimer = () => {
+const Privacy = () => {
 
   const navigate = useNavigate()
 
@@ -75,22 +75,102 @@ const Disclaimer = () => {
       </div>
 
       <div className='w-full flex flex-col gap-[64px] sm:gap-[32px] justify-center items-center'>
-        <div className='w-full text-center max-w-[1000px] text-[56px] leading-[60px] font-[600] font-[Thunder]'>
-          Disclaimer
+        <div class="max-w-6xl mx-auto rounded-lg">
+          <h1 class="text-3xl font-bold text-center mb-6">Privacy Policy</h1>
+          <p class="text-sm">Effective Date: October 01, 2024</p>
+
+          <p class="mt-4 text-lg">At BOOST, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, share, and protect your information when you use our platform, which facilitates Web3 project launches and community engagement through our launchpad and social app.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">1. Information We Collect</h2>
+          <p class="mt-2 text-lg">We may collect and process the following types of information:</p>
+
+          <h3 class="mt-4 text-xl font-semibold">Personal Information</h3>
+          <ul class="list-inside list-disc ml-5">
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Wallet addresses (for Web3 transactions)</li>
+            <li>Transaction history (related to staking or project participation)</li>
+            <li>Contact details when you subscribe to our newsletter or updates</li>
+          </ul>
+
+          <h3 class="mt-4 text-xl font-semibold">Non-Personal Information</h3>
+          <ul class="list-inside list-disc ml-5">
+            <li>Device information (such as IP address, browser type)</li>
+            <li>Usage data (including pages visited, time spent on the platform, referral sources)</li>
+            <li>Cookies and tracking technologies for user experience improvement and analytics</li>
+          </ul>
+
+          <h2 class="mt-6 text-2xl font-semibold">2. Legal Basis for Processing Your Data</h2>
+          <p class="mt-2 text-lg">We process your personal data based on the following legal grounds:</p>
+          <ul class="list-inside list-decimal ml-5">
+            <li>Consent: When you provide consent to collect and use your data (e.g., for marketing communications).</li>
+            <li>Performance of a Contract: To fulfill services you request, such as enabling participation in Web3 project launches.</li>
+            <li>Legitimate Interests: To improve our platform, secure transactions, and better serve our users.</li>
+            <li>Compliance with Legal Obligations: To adhere to applicable laws and regulatory requirements.</li>
+          </ul>
+
+          <h2 class="mt-6 text-2xl font-semibold">3. How We Use Your Information</h2>
+          <p class="mt-2 text-lg">We may use your information for purposes such as:</p>
+          <ul class="list-inside list-disc ml-5">
+            <li>Providing access to the BOOST platform, including Web3 project launches and social features.</li>
+            <li>Processing transactions such as staking and participation in launchpad projects.</li>
+            <li>Improving platform functionality, user experience, and personalization.</li>
+            <li>Sending updates, marketing communications, and relevant project notifications (with your consent).</li>
+            <li>Ensuring security, fraud prevention, and legal compliance.</li>
+          </ul>
+
+          <h2 class="mt-6 text-2xl font-semibold">4. Cookies and Tracking Technologies</h2>
+          <p class="mt-2 text-lg">BOOST uses cookies and similar tracking technologies to provide you with a better user experience and gather analytics data. You can control the use of cookies via your browser settings, but disabling cookies may limit some features of our platform. For more information, please refer to our Cookie Policy.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">5. Sharing of Information</h2>
+          <p class="mt-2 text-lg">We do not sell your personal information to third parties. We may share your information in the following circumstances:</p>
+          <ul class="list-inside list-disc ml-5">
+            <li>Service Providers: We work with trusted third-party service providers to facilitate transactions, analytics, and platform performance.</li>
+            <li>Legal Compliance: We may disclose information where required by law, regulation, or legal proceedings.</li>
+            <li>Business Transfers: In the event of a merger, acquisition, or sale of all or a portion of our assets, we may transfer your information.</li>
+          </ul>
+
+          <h2 class="mt-6 text-2xl font-semibold">6. Data Transfers (Cross-Border Transfers)</h2>
+          <p class="mt-2 text-lg">BOOST operates globally, and your information may be transferred to and processed in countries other than your own. We ensure that any such transfers comply with applicable data protection laws, and we take steps to ensure that your data remains protected. For users in the European Economic Area (EEA), we rely on Standard Contractual Clauses (SCCs) or other mechanisms to ensure data protection during transfers.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">7. Data Security</h2>
+          <p class="mt-2 text-lg">We implement strict security protocols to protect your information from unauthorized access, alteration, or disclosure. We use industry-standard encryption and security measures, but no method of transmission over the internet or electronic storage is completely secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee its absolute security.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">8. Retention of Information</h2>
+          <p class="mt-2 text-lg">We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy or as required by law. After that period, your data will either be deleted or anonymized.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">9. Your Rights</h2>
+          <p class="mt-2 text-lg">Depending on your location, you may have certain rights regarding your personal data, including:</p>
+          <ul class="list-inside list-disc ml-5">
+            <li>Access: The right to request access to your personal data.</li>
+            <li>Correction: The right to correct any inaccurate or incomplete data.</li>
+            <li>Deletion: The right to request that your data be erased.</li>
+            <li>Restriction: The right to request that we restrict the processing of your data.</li>
+            <li>Portability: The right to receive your personal data in a machine-readable format.</li>
+          </ul>
+          <p class="mt-2 text-lg">To exercise any of these rights, please contact us through Telegram or X. We will respond to your request within the timeframe required by applicable law.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">10. Children’s Privacy</h2>
+          <p class="mt-2 text-lg">BOOST does not knowingly collect personal information from children under the age of 16. If we become aware that we have inadvertently collected such information, we will take immediate steps to delete it. Parents or guardians who believe their child may have provided us with personal information should contact us through Telegram or X.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">11. Third-Party Links</h2>
+          <p class="mt-2 text-lg">Our platform may contain links to third-party websites or services that are not operated by BOOST. We have no control over these third-party sites, and their privacy practices may differ from ours. We encourage you to review the privacy policies of any third-party websites you visit.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">12. Marketing Communications & Opt-Out</h2>
+          <p class="mt-2 text-lg">With your consent, we may send you marketing communications regarding our products and services. If you prefer not to receive these communications, you may opt-out at any time by:</p>
+          <ul class="list-inside list-disc ml-5">
+            <li>Clicking the "unsubscribe" link in any email.</li>
+            <li>Contacting us through Telegram or X.</li>
+          </ul>
+          <p class="mt-2 text-lg">We will respect your preferences and remove you from marketing lists as requested.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">13. Changes to This Privacy Policy</h2>
+          <p class="mt-2 text-lg">BOOST may update this Privacy Policy from time to time to reflect changes in our practices, services, or legal requirements. We will notify you of any material changes by posting the updated policy on this page with an updated effective date. We encourage you to review this policy periodically to stay informed.</p>
+
+          <h2 class="mt-6 text-2xl font-semibold">14. Contact Us</h2>
+          <p class="mt-2 text-lg">If you have any questions or concerns about this Privacy Policy, please contact us through Telegram or X.</p>
         </div>
-        <div className='w-full text-left max-w-[1000px] text-[16px] leading-[20px] font-[500]'>
-          This presentation may contain forward-looking statements including, but not limited to, statements as to future operating results and plans that involve risks and uncertainties. The use of words such as “expects”, “anticipates”, “believes”, “estimates”, the negative of these terms and similar expressions, identify forward- looking statements. Such forward-looking statements involve known and unknown risks, uncertainties and other factors which may cause the actual results, performance or achievements of BOOST to differ materially from any future results, performance or achievements expressed or implied by those projected in the forward-looking statements for any reason.
-          <br /><br />
-          This presentation does not constitute a prospectus or offer document of any sort and is not intended to constitute an offer of securities or a solicitation for investments in securities in any jurisdiction. No person is bound to enter into any contract or binding legal commitment, and no form of payment is to be accepted based on this presentation. Any agreement relating to the sale and purchase of securities issued by BOOST is to be governed solely by any purchase documents as BOOST may require and no other document (including this presentation). This presentation and the information included herein is intended only for the use of the addressee(s) and contains information that is PRIVILEGED and CONFIDENTIAL.
-          <br /><br />
-          If you are not the intended recipient, you are hereby notified that any dissemination of this presentation is strictly prohibited. If you receive this presentation in error, please delete all copies and notify the sender immediately.
-          <br /><br />
-          No regulatory authority has examined or approved of any of the information set out in this presentation. No such examination has been or will be sought under the laws, regulatory requirements or rules of any jurisdiction. The publication, distribution or dissemination of this presentation does not imply that any such applicable laws, regulatory requirements or rules have been complied with. The financial information included in this presentation includes forecasts, projections and other predictive statements (collectively, the “Forecasts”) that represent BOOST’s assumptions and expectations as of the date of this presentation in light of currently available information. The Forecasts are based on industry trends, circumstances involving clients and other factors, and the Forecasts involve numerous material risks, variables and uncertainties.
-          <br /><br />
-          BOOST’s actual performance results may differ materially from the Forecasts. Consequently, no guarantee is given or implied as to the accuracy of the Forecasts or any other predictive statements contained in this presentation. There are material risks and uncertainties associated with BOOST and its business and operations.
-          <br /><br />
-          BOOST does not make or purport to make, and hereby disclaims, any representation, warranty or undertaking in any form whatsoever to any entity or person, including any representation, warranty or undertaking as to the accuracy and completeness of any of the information set out in this presentation.
-        </div>
+
 
       </div>
 
@@ -157,11 +237,11 @@ const Disclaimer = () => {
 
       </div>
       <div className="absolute w-[full] flex overflow-visible m-auto translate-y-[50%] bottom-0 z-[0]">
-        <div className="w-[1680px] h-[500px] border-[1px] border-[#ff0000] blur-[250px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#26D7F3_0%,_rgba(38,_215,_243,_0)_83.03%)]">
+        <div className="w-[1600px] h-[700px] border-[1px] border-[#ff0000] blur-[250px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#26D7F3_0%,_rgba(38,_215,_243,_0)_83.03%)]">
         </div>
       </div>
     </div>
   )
 }
 
-export default Disclaimer
+export default Privacy

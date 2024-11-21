@@ -11,7 +11,7 @@ import { LogoFull } from "../resources/svg/Global"
 import boost_big2 from '../resources/images/boost_big2.png'
 import logoImage from '../resources/images/logo.png'
 
-const Disclaimer = () => {
+const Cookies = () => {
 
   const navigate = useNavigate()
 
@@ -75,22 +75,69 @@ const Disclaimer = () => {
       </div>
 
       <div className='w-full flex flex-col gap-[64px] sm:gap-[32px] justify-center items-center'>
-        <div className='w-full text-center max-w-[1000px] text-[56px] leading-[60px] font-[600] font-[Thunder]'>
-          Disclaimer
+        <div class="p-6 max-w-6xl mx-auto rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Effective Date: October 01, 2024</h2>
+          <p class="mb-4">
+            At BOOST, we believe in being transparent about how we collect and use data related to your use of our platform. This Cookie Policy explains what cookies are, how we use them, and the options available to you regarding their management. By using the BOOST website and services, you consent to our use of cookies as outlined in this policy.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">1. What Are Cookies?</h3>
+          <p class="mb-4">
+            Cookies are small text files that are placed on your device (computer, mobile phone, etc.) when you visit a website. They allow the site to recognize your device and store information about your preferences or past actions. This helps enhance your experience and ensures the website functions properly.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">2. Types of Cookies We Use</h3>
+          <ul class="list-disc ml-6 mb-4 space-y-2">
+            <li><strong>Essential Cookies:</strong> Necessary for the website to function and cannot be disabled. They help with basic functions such as page navigation and accessing secure areas of the website.</li>
+            <li><strong>Performance Cookies:</strong> Collect information about how visitors use our site, such as which pages are visited most often. We use this data to improve the performance of our platform.</li>
+            <li><strong>Functional Cookies:</strong> Allow the website to remember choices you make, such as your language preferences, for enhanced functionality.</li>
+            <li><strong>Analytics Cookies:</strong> Help us understand user interactions by collecting information about visits, such as pages viewed and interactions with content.</li>
+            <li><strong>Advertising Cookies:</strong> Track your browsing behavior to deliver advertisements relevant to your interests, set by us or our advertising partners.</li>
+          </ul>
+
+          <h3 class="text-lg font-semibold mb-2">3. Third-Party Cookies</h3>
+          <p class="mb-4">
+            We use third-party services like Google Analytics and Facebook Pixel to track user behavior and deliver targeted advertisements. Please review their privacy policies for more information.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">4. Cookie Consent and Management</h3>
+          <p class="mb-4">
+            When you first visit our website, you will be prompted to give consent for non-essential cookies. You can change preferences via the Cookie Preference Center or modify your browser settings. Disabling certain cookies may affect your experience on the platform.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">5. Cookie Duration and Retention</h3>
+          <p class="mb-4">
+            Cookies may remain on your device for different durations:
+          </p>
+          <ul class="list-disc ml-6 mb-4 space-y-2">
+            <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser.</li>
+            <li><strong>Persistent Cookies:</strong> Cookies that remain on your device for a longer period or until manually deleted.</li>
+          </ul>
+          <p class="mb-4">
+            Manage cookies via your browser settings or the Cookie Preference Center.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">6. Legal Basis for Processing Cookies</h3>
+          <p class="mb-4">
+            For GDPR-compliant regions, we rely on consent for non-essential cookies. Users in California can opt-out of personal information sale via our "Do Not Sell My Personal Information" page or by contacting us.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">7. International Data Transfers</h3>
+          <p class="mb-4">
+            Some cookies and third-party services may transfer your data across jurisdictions. We ensure appropriate safeguards, such as Standard Contractual Clauses (SCCs), to protect your data.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">8. Updates to this Cookie Policy</h3>
+          <p class="mb-4">
+            We may update this policy to reflect changes in practices or legal requirements. Updates will be posted here with an updated effective date. Review this policy periodically to stay informed.
+          </p>
+
+          <h3 class="text-lg font-semibold mb-2">9. Contact Us</h3>
+          <p class="mb-4">
+            If you have questions about this Cookie Policy or wish to exercise your rights regarding cookies, please contact us through Telegram or X.
+          </p>
         </div>
-        <div className='w-full text-left max-w-[1000px] text-[16px] leading-[20px] font-[500]'>
-          This presentation may contain forward-looking statements including, but not limited to, statements as to future operating results and plans that involve risks and uncertainties. The use of words such as “expects”, “anticipates”, “believes”, “estimates”, the negative of these terms and similar expressions, identify forward- looking statements. Such forward-looking statements involve known and unknown risks, uncertainties and other factors which may cause the actual results, performance or achievements of BOOST to differ materially from any future results, performance or achievements expressed or implied by those projected in the forward-looking statements for any reason.
-          <br /><br />
-          This presentation does not constitute a prospectus or offer document of any sort and is not intended to constitute an offer of securities or a solicitation for investments in securities in any jurisdiction. No person is bound to enter into any contract or binding legal commitment, and no form of payment is to be accepted based on this presentation. Any agreement relating to the sale and purchase of securities issued by BOOST is to be governed solely by any purchase documents as BOOST may require and no other document (including this presentation). This presentation and the information included herein is intended only for the use of the addressee(s) and contains information that is PRIVILEGED and CONFIDENTIAL.
-          <br /><br />
-          If you are not the intended recipient, you are hereby notified that any dissemination of this presentation is strictly prohibited. If you receive this presentation in error, please delete all copies and notify the sender immediately.
-          <br /><br />
-          No regulatory authority has examined or approved of any of the information set out in this presentation. No such examination has been or will be sought under the laws, regulatory requirements or rules of any jurisdiction. The publication, distribution or dissemination of this presentation does not imply that any such applicable laws, regulatory requirements or rules have been complied with. The financial information included in this presentation includes forecasts, projections and other predictive statements (collectively, the “Forecasts”) that represent BOOST’s assumptions and expectations as of the date of this presentation in light of currently available information. The Forecasts are based on industry trends, circumstances involving clients and other factors, and the Forecasts involve numerous material risks, variables and uncertainties.
-          <br /><br />
-          BOOST’s actual performance results may differ materially from the Forecasts. Consequently, no guarantee is given or implied as to the accuracy of the Forecasts or any other predictive statements contained in this presentation. There are material risks and uncertainties associated with BOOST and its business and operations.
-          <br /><br />
-          BOOST does not make or purport to make, and hereby disclaims, any representation, warranty or undertaking in any form whatsoever to any entity or person, including any representation, warranty or undertaking as to the accuracy and completeness of any of the information set out in this presentation.
-        </div>
+
 
       </div>
 
@@ -157,11 +204,11 @@ const Disclaimer = () => {
 
       </div>
       <div className="absolute w-[full] flex overflow-visible m-auto translate-y-[50%] bottom-0 z-[0]">
-        <div className="w-[1680px] h-[500px] border-[1px] border-[#ff0000] blur-[250px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#26D7F3_0%,_rgba(38,_215,_243,_0)_83.03%)]">
+        <div className="w-[1600px] h-[700px] border-[1px] border-[#ff0000] blur-[250px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#26D7F3_0%,_rgba(38,_215,_243,_0)_83.03%)]">
         </div>
       </div>
     </div>
   )
 }
 
-export default Disclaimer
+export default Cookies

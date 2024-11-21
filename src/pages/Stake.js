@@ -91,8 +91,9 @@ const Stake = () => {
               </a>
             </div>
           </div>
-          <div className="absolute z-[-100]">
-            <img className="h-[850px]" src={nav_bg} alt="" />
+          <div className="absolute z-[0]">
+            <div className="w-[600px] h-[1000px] border-[1px] blur-[350px] bg-[radial-gradient(251.86%_99.26%_at_50%_15.25%,_#005ACF_24.58%,_#002452_83.03%)]">
+            </div>
           </div>
         </div>
 
@@ -196,9 +197,9 @@ const Stake = () => {
             <LogoFull />
             <a href="#" className="hover:underline py-[12px] ext-[16px] leading-[20px] sm:pt-[48px] font-[700] text-[#ffffff]">Read Whitepaper</a>
             <div className="flex sm:flex-col text-center text-[16px] leading-[20px] font-[400] gap-[24px] sm:gap-[16px]">
-              <a href="#" className="hover:underline">Privacy Policy</a>
-              <a href="#" className="hover:underline">Cookie Policy</a>
-              <a href="#" className="hover:underline">Disclaimer</a>
+              <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
+              <a href="/cookies" className="hover:underline">Cookie Policy</a>
+              <a href="/disclaimer" className="hover:underline">Disclaimer</a>
             </div>
 
             <div className="pt-[48px] pb-[24px] hidden sm:flex w-full items-center justify-center">

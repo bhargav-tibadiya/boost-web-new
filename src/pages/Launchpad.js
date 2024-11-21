@@ -73,16 +73,16 @@ const Launchpad = () => {
       <div className="px-[120px] sm:px-[20px] relative z-100">
         <Navbar />
 
-        <div className="w-full flex flex-col items-center justify-between">
-          <div className='w-full flex flex-row max-w-[1200px] items-center justify-start'>
+        <div className="w-full flex flex-col  items-center justify-between">
+          <div className='w-full flex flex-row sm:!flex-col max-w-[1200px] items-center sm:items-start justify-start'>
 
-            <div className="sm:scale-[75%] items-start max-w-[1200px]">
-              <img src={BoostLaunchpad} alt="" className="w-full max-w-[250px]" />
+            <div className="flex sm:w-full sm:justify-start items-start max-w-[1200px]">
+              <img src={BoostLaunchpad} alt="" className="w-full max-w-[250px] sm:max-w-[150px] py-[16px]" />
             </div>
 
-            <div className='!w-[1px] !min-w-[1px] h-full min-h-[64px] border-[#26D7F3] border-l-[1px] ml-[16px] px-[8px]'></div>
+            <div className='!w-[1px] !min-w-[1px] sm:hidden h-full min-h-[64px] border-[#26D7F3] border-l-[1px] ml-[16px] px-[8px]'></div>
 
-            <div className="text-[18px] sm:text-[16px] leading-[28px] sm:leading-[20px] sm:text-center font-[400] text-[#000000] max-w-[650px]">
+            <div className="text-[18px] sm:text-[16px] leading-[28px] sm:text-justify sm:leading-[20px] font-[400] text-[#000000] max-w-[650px]">
               BOOST Launchpad democratises access to new Web3 project launches.  Participate in exciting projects exclusively on our platform.
             </div>
           </div>

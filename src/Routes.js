@@ -6,6 +6,8 @@ import Project from "./pages/Project";
 import JoinPool from "./pages/JoinPool";
 import Disclaimer from "./pages/Disclaimer";
 import Launchpad from "./pages/Launchpad";
+import Privacy from "./pages/Privacy";
+import Cookies from "./pages/Cookies";
 
 const Home = lazy(() => retry(() => import("./pages/Home")));
 const BoostBuy = lazy(() => retry(() => import("./pages/BoostBuy")));
@@ -42,6 +44,14 @@ const Routes = () => {
     {
       path: "/disclaimer",
       element: <Disclaimer />,
+    },
+    {
+      path: "/privacy-policy",
+      element: <Privacy />,
+    },
+    {
+      path: "/cookies",
+      element: <Cookies />,
     },
     {
       path: "/loader",
