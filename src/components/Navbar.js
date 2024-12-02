@@ -20,10 +20,10 @@ const Navbar = () => {
   }
 
   return (
-    <div className="max-w-[100vw] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+    <div className="max-w-[1200px] w-full realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
 
       {/* Navbar Menus */}
-      <div className="flex flex-row relative z-[000] items-center justify-center gap-[24px] sm:gap-[8px]">
+      <div className="flex flex-row relative z-[500] items-center justify-center gap-[24px] sm:gap-[8px]">
         <div className="cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
         <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
         <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
@@ -40,9 +40,9 @@ const Navbar = () => {
         {isMenuActive ? <IoCloseSharp size={32} /> : <RxHamburgerMenu size={32} color="#000000" />}
       </div>
 
-      <div className={`absolute z-[500] ${isMenuActive ? 'flex' : 'hidden'}  top-0 left-[0px] w-[100vw] bg-[#ffffff] text-[#000000] h-[850px]`} >
+      <div className={`absolute w-full max-w-[1200px] z-[500] ${isMenuActive ? 'flex' : 'hidden'}  top-0 left-[0px] bg-[#ffffff] text-[#000000] h-[850px]`} >
         <div className="flex z-[600] relative flex-col w-full items-center justify-center gap-[24px] sm:gap-[24px]">
-          <div className="cursor-pointer max-h-[48px] mb-[54px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[60px] sm:max-h-[72px] sm:min-w-[60px] sm:min-h-[72px]" onClick={() => navigate('/')} src={boost_big2} alt="" /></div>
+          <div className="cursor-pointer z-[500] max-h-[48px] mb-[54px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[60px] sm:max-h-[72px] sm:min-w-[60px] sm:min-h-[72px]" onClick={() => navigate('/')} src={boost_big2} alt="" /></div>
           <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#000000]" onClick={() => navigate('/')}>HOME</div>
           <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#000000]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
           <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#000000]" onClick={() => navigate('/stack')}>STACK</div>

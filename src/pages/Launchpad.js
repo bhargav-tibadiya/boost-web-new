@@ -68,12 +68,12 @@ const Launchpad = () => {
 
 
   return (
-    <div className="stack_container relative z-100 max-w-[100vw] overflow-hidden">
+    <div className="stack_container w-full relative z-100 overflow-hidden">
 
-      <div className="px-[120px] sm:px-[20px] relative z-100">
+      <div className="px-[120px] max-w-w-[1200px] flex flex-col items-center justify-center sm:px-[20px] relative z-100">
         <Navbar />
 
-        <div className="w-full flex flex-col  items-center justify-between">
+        <div className="w-full flex flex-col items-center justify-between">
           <div className='w-full flex flex-row sm:!flex-col max-w-[1200px] items-center sm:items-start justify-start'>
 
             <div className="flex sm:w-full sm:justify-start items-start max-w-[1200px]">

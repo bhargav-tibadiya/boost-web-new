@@ -11,7 +11,7 @@ import TelegramIconW from '../resources/images/tele-white.png'
 
 const Footer = () => {
   return (
-    <div className="py-[56px] text-[#000000] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
+    <div className="py-[56px] max-w-[1200px] text-[#000000] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
 
       <div className="flex flex-row sm:!flex-col sm:items-center w-full relative z-[10] top-0">
 

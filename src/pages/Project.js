@@ -62,9 +62,9 @@ const Project = () => {
 
 
   return (
-    <div className="stack_container relative z-100 max-w-[100vw] overflow-hidden">
+    <div className="stack_container flex flex-col items-center justify-center w-full relative z-100 max-w-[100vw] overflow-hidden">
 
-      <div className="px-[120px] sm:px-[20px] relative z-100">
+      <div className="px-[120px] max-w-[1440px] sm:px-[20px] relative z-100">
 
         <Navbar />
 

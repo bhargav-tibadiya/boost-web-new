@@ -436,7 +436,7 @@ const Home = () => {
   };
 
   return (
-    <div className="overfolow-hidden box-border bg-[#002452] px-[120px] sm:px-[20px] sm:max-w-[100vw] relative z-100">
+    <div className="overfolow-hidden flex flex-col justify-center items-center box-border bg-[#002452] px-[120px] sm:px-[20px] sm:max-w-[100vw] relative z-100">
       {/* <div className="sm:hidden texture_bg absolute z-[0] overflow-visible top-0 left-0">
         <img src={homeBg} alt="homeBg" />
       </div> */}
@@ -450,13 +450,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full relative z-[500]">
+      <div className="w-full min-w-[1200px] flex items-center relative justify-center z-[500]">
         {/* Navbar  */}
-        <div className="max-w-[100vw] text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+        <div className="max-w-[1200px] w-full sm:flex sm:items-center sm:justify-between sm:w-full text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
 
           {/* Navbar Menus */}
-          <div className="flex relative z-[000] flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
-            <div className="cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
+          <div className="flex relative z-[500] flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
+            <div className={`cursor-pointer z-[500] ${isMenuActive ? 'hidden' : 'flex'} max-h-[48px]`}><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stake')}>STAKE</div>
@@ -464,8 +464,8 @@ const Home = () => {
           </div>
 
           {/* Connect Wallat Button */}
-          <div className="flex items-center justify-center h-full sm:text-[14px] cursor-pointer font-[700]">
-            <div className="flex items-center justify-center h-full gap-[12px]">
+          <div className="flex items-center justify-center h-full sm:text-[14px] cursor-pointer font-[700] !z-[5000]">
+            <div className="flex items-center w-full justify-center h-full gap-[12px]">
               <a href="https://t.me/boostlaunchpad" className="sm:hidden flex items-center justify-center h-[32px] w-[32px] rounded-[50px] bg-[#239FDB] shadow-[#198DC4] border-[1px] border-[#198DC4] shadow-[2.4px_1.6px_0_0]">
                 <img className="w-[18px] h-[18px]" src={TelegramIconW} alt="" />
               </a>
@@ -481,8 +481,8 @@ const Home = () => {
 
         </div>
 
-        <div className={`absolute z-[500] ${isMenuActive ? 'flex' : 'hidden'} top-0 left-[-20px] w-[100vw] bg-[#002452] h-[850px]`} >
-          <div className="flex z-[600] relative flex-col w-full items-center justify-center gap-[24px] sm:gap-[24px]">
+        <div className={`absolute w-[110%] z-[700] ${isMenuActive ? 'flex' : 'hidden'} top-0 left-[-20px] w-[100vw] bg-[#002452] h-[850px]`} >
+          <div className="flex z-[600] min-w-full relative flex-col w-full items-center justify-center gap-[24px] sm:gap-[24px]">
             <div className="cursor-pointer max-h-[48px] mb-[54px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[60px] sm:max-h-[72px] sm:min-w-[60px] sm:min-h-[72px]" onClick={() => navigate('/')} src={boost_big2} alt="" /></div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:flex hidden cursor-pointer font-[700] text-[18px] text-[#ffffff]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
@@ -506,7 +506,7 @@ const Home = () => {
       </div>
 
 
-      <section className="home_section relative z-[50]">
+      <section className="home_section relative z-[50] max-w-[1200px]">
         <div className="flex sm:flex-col items-start justify-center w-full h-full gap-[60px] py-[70px] sm:py-[14px]">
 
           {/* Left   */}
@@ -642,7 +642,7 @@ const Home = () => {
 
         </div>
 
-        <div className="mt-[154px] sm:mt-[48px] mb-[200px] sm:mb-[48px] flex items-center justify-center w-full ">
+        <div className="mt-[154px] max-w-[1200px] sm:mt-[48px] mb-[200px] sm:mb-[48px] flex items-center justify-center w-full ">
 
           <div className="px-[20px] max-w-[950px] p-[16px]  sm:p-[10px] min-w-[420px] sm:min-w-[325px] sm:max-w-[95%] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative border-[2.73px] border-[#ffffff49] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1] bg-[linear-gradient(180deg,_rgba(255,255,255,0.8)_0%,_rgba(143,143,143,0.8)_58%,_rgba(255,255,255,0.8)_100%)]">
             <div className="flex flex-col text-[20px] leading-[30px] sm:text-[16px] sm:leading-[24px] text-justify font-[400] items-center text-[#002452] justify-center py-[56px] bg-[#ffffff] px-[56px] sm:py-[24px] sm:px-[16px] rounded-[48px] border-[2.73px] border-[#ffffff49] border-solid bg-[radial-gradient(155.61%_569.43%_at_-6.84%_100%,_rgba(172,255,183,0.2)_0%,_rgba(11,202,255,0.2)_75.45%,_rgba(31,147,255,0.2)_100%)]">
@@ -654,7 +654,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col items-center justify-between">
+        <div className="w-full max-w-[1200px] flex flex-col items-center justify-between">
           <div className="sm:scale-[75%] sm:hidden">
             <img src={BoostLaunchpad} alt="" className="w-full" />
           </div>
@@ -794,7 +794,7 @@ const Home = () => {
       </div>
 
       {/* Ecosystem */}
-      <div className="flex flex-col mt-[100px] relative overflow-visible items-center justify-center z-150">
+      <div className="flex flex-col mt-[100px] max-w-[1200px] relative overflow-visible items-center justify-center z-150">
         <img className="relative hidden sm:flex z-[151]" src={Boost_6} alt="Ecosystem" />
         <img className="relative sm:hidden flex z-[151]" src={Ecosystem} alt="Ecosystem" />
         <img className="relative sm:flex hidden sm:pt-[50px] z-[151]" src={Boost_7} alt="Ecosystem" />
@@ -807,7 +807,7 @@ const Home = () => {
 
       </div>
 
-      <div className="mt-[154px] sm:mt-[48px] mb-[200px] sm:mb-[48px] flex items-center justify-center w-full ">
+      <div className="mt-[154px] max-w-[1200px] sm:mt-[48px] mb-[200px] sm:mb-[48px] flex items-center justify-center w-full ">
 
         <div className="px-[20px] max-w-[950px] p-[16px] sm:rounded-[40px]  sm:p-[10px] min-w-[420px] sm:min-w-[325px] sm:max-w-[95%] bg-custom-radial bg-custom-linear rounded-[64px] bg-blend-overlay relative border-[2.73px] border-[#ffffff49] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1] bg-[linear-gradient(180deg,_rgba(255,255,255,0.8)_0%,_rgba(143,143,143,0.8)_58%,_rgba(255,255,255,0.8)_100%)]">
           <div className="flex text-[20px] leading-[30px] font-[400] text-[#002452] items-center justify-center flex-col sm:w-[100%] px-[154px] py-[96px] sm:p-[40px] rounded-[64px] sm:rounded-[24px] gap-[40px] sm:gap-[20px] bg-center bg-[#ffffff] border-[1px] border-[#ffffff1f]">
@@ -819,7 +819,7 @@ const Home = () => {
       </div>
 
       {/* Team */}
-      <div className="flex flex-wrap items-center justify-between mt-[200px] sm:mt-[100px] px-[115px] sm:px-[0px] w-full">
+      <div className="flex max-w-[1200px] flex-wrap items-center justify-between mt-[200px] sm:mt-[100px] px-[115px] sm:px-[0px] w-full">
         <div className="text-[56px] leading-[60px] font-[Thunder] font-[600] text-[#ffffff] w-full text-center sm:py-[15px]">Meet the Team</div>
         <div className="flex flex-wrap items-start justify-center mt-[48px] gap-[72px] sm:gap-[40px]">
 
@@ -881,7 +881,7 @@ const Home = () => {
       <div ref={targetDivRef} id="faq" className="w-full relative z-10 text-center mt-[200px] sm:mt-[120px] mb-[56px] sm:mb-[40px] font-[Thunder] text-[56px] leading-[60px] sm:text-[40px] sm:leading-[48px] sm:px-[25px] font-[600] text-[#ffffff]">
         Frequently Asked Questions
       </div>
-      <div className="flex flex-col gap-[30px] sm:gap-[25px] w-full px-[200px] sm:px-[0]">
+      <div className="flex max-w-[1200px] flex-col gap-[30px] sm:gap-[25px] w-full px-[200px] sm:px-[0]">
         {faqData.map((que, index) => (
           <div key={index} className="w-full flex flex-col relative z-10">
             {activeAccordion === index ? (

@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import logoImage from '../resources/images/logo.png'
 
-import XIcon from '../resources/images/x-white.png'
-import TelegramIcon from '../resources/images/tele-white.png'
 import StackBoost from '../resources/images/stackboost.png'
 import StartStacking from '../resources/images/startstacking.png'
 import { LogoFull } from "../resources/svg/Global"
@@ -13,7 +11,6 @@ import { IoCloseSharp } from "react-icons/io5"
 import { RxHamburgerMenu } from "react-icons/rx"
 
 import boost_big2 from '../resources/images/boost_big2.png'
-import nav_bg from '../resources/images/nav_bg.png'
 import XIconW from '../resources/images/x-white.png'
 import TelegramIconW from '../resources/images/tele-white.png'
 
@@ -30,27 +27,27 @@ const Stake = () => {
 
   const handleButtonClick = () => {
     // Scroll to the div
+    navigate("/"); 
     if (targetDivRef.current) {
       targetDivRef.current.scrollIntoView({ behavior: 'smooth' });
     }
 
     // Optional: If you also want to navigate to a different route
-    // navigate("/new-page"); 
   };
 
 
 
   return (
-    <div className="stack_container box-border relative z-0 min-h-[100vh] max-w-[100vw] overflow-hidden bg-[#002452] px-[120px] sm:px-[20px]">
+    <div className="stack_container flex flex-col justify-center items-center box-border relative z-0 min-h-[100vh] max-w-[100vw] overflow-hidden bg-[#002452] px-[120px] sm:px-[20px]">
 
 
-      <div className="w-full relative z-[500]">
+      <div className=" relative max-w-[1200px] flex flex-row items-center justify-between w-full z-[500]">
         {/* Navbar  */}
-        <div className="max-w-[100vw] text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
+        <div className="max-w-[100vw] w-full text-[#ffffff] realtive z-[5000] max-h-full flex flex-row items-center justify-between py-[32px] sm:py-[8px] sm:mb-[5px]">
 
           {/* Navbar Menus */}
           <div className="flex relative z-[000] flex-row items-center justify-center gap-[24px] sm:gap-[8px]">
-            <div className="cursor-pointer max-h-[48px]"><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
+            <div className={`cursor-pointer ${isMenuActive ? 'hidden' : 'flex'} max-h-[48px]`}><img className="max-w-[40px] max-h-[48px] sm:max-w-[30px] sm:max-h-[36px]" onClick={() => navigate('/')} src={logoImage} alt="" /></div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/')}>HOME</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/launchpad')}>LAUNCHPAD</div>
             <div className="sm:hidden cursor-pointer font-[700] sm:text-[12px]" onClick={() => navigate('/stake')}>STAKE</div>
@@ -100,7 +97,7 @@ const Stake = () => {
       </div>
 
       {/* Start Stacking */}
-      <div className="px-[70px] py-[72px] sm:!flex-col sm:p-[5px] sm:mt-[25px] sm:gap-[25px] flex flex-row justify-between sm:justify-center sm:items-center">
+      <div className="px-[70px] max-w-[1200px] py-[72px] sm:!flex-col sm:p-[5px] sm:mt-[25px] sm:gap-[25px] gap-[48px] flex flex-row justify-between sm:justify-center sm:items-center">
         <div className="flex sm:!flex-col justify-start items-center">
           <img src={StackBoost} className="sm:hidden flex scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
           <img src={Boost_8} className="sm:flex hidden scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
@@ -169,7 +166,7 @@ const Stake = () => {
         </div>
       </div>
 
-      <div className="w-[100%] box-border flex flex-col items-center justify-center my-[135px] px-[160px] sm:p-1">
+      <div className="w-[100%] max-w-[1200px] box-border flex flex-col items-center justify-center my-[135px] px-[160px] sm:p-1">
         <div className="bg-[#ffffff3D] flex flex-col items-center justify-center p-[64px] sm:px-[20px] sm:py-[24px] rounded-[48px] border-[3px] border-[#eeeeee3d]">
           <div className="text-[40px] leading-[50px] sm:text-[18px] sm:leading-[24px] sm:text-center font-[700] text-[#ffffff]">Are you spearheading a project that's setting the next era of innovation?</div>
           <div className="text-[16px] leading-[20px] sm:text-[12px] sm:leading-[18px] font-[400] text-center mt-[24px] text-[#ffffff]">Contact us today to explore the launch possibilities with BOOST Ignition's collaborative incubation and funding solutions. Join the BOOST community—one of the most expansive and dynamic networks in the industry—and unlock a world of opportunities.</div>
@@ -189,7 +186,7 @@ const Stake = () => {
       </div>
 
       {/* Footer */}
-      <div className="py-[56px] text-[#ffffff] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
+      <div className="py-[56px] max-w-[1200px] text-[#ffffff] mt-[100px] sm:mt-[50px] sm:pt-[56px] sm:pb-[28px] relative flex flex-col z-100 justify-center w-full items-center before:">
 
         <div className="flex flex-row sm:!flex-col sm:items-center w-full relative z-[10] top-0">
 
