@@ -19,7 +19,7 @@ const launchpadData = [
   {
     name: 'Safeforge',
     desc: "Safeforge is building the ultimate passive vehicle, wrapping the best trading strategies into a single portfolio. This is done by a reputation-driven system creating a decentralised hedge fund, allocating funds to the best signals.<br /><br />The team brings together the best from Academia (PhD), Institutional (Ex-Blackrock Global product manager), and Crypto (Ex-regional CEO of Huobi).",
-    raise: '$5,000,000',
+    raise: '$500,000',
     price: 'TBA',
     date: 'TBA',
     pic: SafeForgeBG,
@@ -45,20 +45,20 @@ const launchpadData = [
     path: '/launchpad/project/safeforge'
 
   },
-  {
-    name: 'RF',
-    desc: 'RF’s iconic pieces  are now entering the metaverse as they enter the digital age on a new journey into Web3 and redefine the realm of luxury eyewear.',
-    raise: 'TBA',
-    price: 'TBA',
-    date: 'TBA',
-    pic: RFBG,
-    piclive: RFBGLive,
-    cat1: 'Physical',
-    cat2: 'NFT',
-    cat3: 'Marketplace',
-    isLive: false,
-    path: '/launchpad/project/safeforge'
-  },
+  // {
+  //   name: 'RF',
+  //   desc: 'RF’s iconic pieces  are now entering the metaverse as they enter the digital age on a new journey into Web3 and redefine the realm of luxury eyewear.',
+  //   raise: 'TBA',
+  //   price: 'TBA',
+  //   date: 'TBA',
+  //   pic: RFBG,
+  //   piclive: RFBGLive,
+  //   cat1: 'Physical',
+  //   cat2: 'NFT',
+  //   cat3: 'Marketplace',
+  //   isLive: false,
+  //   path: '/launchpad/project/safeforge'
+  // },
 ]
 
 
