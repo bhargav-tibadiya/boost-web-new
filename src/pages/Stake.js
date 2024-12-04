@@ -27,7 +27,7 @@ const Stake = () => {
 
   const handleButtonClick = () => {
     // Scroll to the div
-    navigate("/"); 
+    navigate("/");
     if (targetDivRef.current) {
       targetDivRef.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -97,22 +97,21 @@ const Stake = () => {
       </div>
 
       {/* Start Stacking */}
-      <div className="px-[70px] max-w-[1200px] py-[72px] sm:!flex-col sm:p-[5px] sm:mt-[25px] sm:gap-[25px] gap-[48px] flex flex-row justify-between sm:justify-center sm:items-center">
-        <div className="flex sm:!flex-col justify-start items-center">
+      <div className="px-[70px] max-w-[1200px] py-[72px] sm:!flex-col sm:p-[5px] sm:mt-[25px] sm:gap-[25px] gap-[96px] flex flex-row justify-between sm:justify-center sm:items-center">
+        <div className="flex sm:!flex-col justify-start items-center w-full">
           <img src={StackBoost} className="sm:hidden flex scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
           <img src={Boost_8} className="sm:flex hidden scale-110 sm:min-w-[150px] sm:max-w-[300px] py-[25px]" alt="" />
         </div>
 
-        <div className="flex items-center justify-center px-[20px] py-[20px] max-w-[550px] min-w-[420px] sm:max-w-[350px] sm:min-w-[300px] bg-custom-radial bg-custom-linear rounded-[64px] sm:rounded-[40px] bg-blend-overlay relative p-4 sm:!p-[15px] border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
+        <div className="flex items-center w-full justify-center px-[20px] py-[20px] max-w-[550px] min-w-[420px] sm:max-w-[350px] sm:min-w-[300px] bg-custom-radial bg-custom-linear rounded-[64px] sm:rounded-[40px] bg-blend-overlay relative p-4 sm:!p-[15px] border-[2.73px] border-solid before:absolute before:inset-0 before:bg-transparent before:border-[2.73px] before:border-transparent before:rounded-[inherit] before:bg-radial-gradient before:from-white/30 before:to-transparent before:opacity-50 before:z-[-1]">
           <div className="flex flex-col w-full items-center justify-center py-[48px] px-[32px] sm:py-[15px] sm:px-[16px] sm:rounded-[32px] rounded-[64px] bg-[#ffffff]">
 
             <img className="" src={StartStacking} alt="" />
 
             {/* Boost Balance */}
-            <div className="flex flex-col w-full mt-[16px] min-w-[400px] sm:min-w-[250px]">
+            <div className="flex flex-col w-full mt-[16px] min-w-full sm:min-w-[250px]">
               <div className="w-full"> <span className="text-[14px] font-[700]">BOOST</span>  Balance</div>
               <div className="w-full border-[1px] border-[#D9D9D9] rounded-[8px] px-[16px] py-[12px] sm:py-[6px] text-[16px] leading-[20px] font-[700]">0</div>
-
             </div>
 
             <div className="bg-[#D9D9D9] w-[100%] h-[1px] mt-[24px]"></div>
